@@ -2,35 +2,40 @@
 <section xml:id="extratopics-packages">
   <title>Packages and Dependencies</title>
   
+  <p>One key tenant of computer science (or anything, for that matter) is that we don't want to reinvent
+    the wheel if we don't have to. A lot of very smart people have made very useful code, so why not use it?</p>
 
+  <p>The <url href="https://pypi.org" visual="Python Package Index (PyPI)"></url> is a website that maintains <term>packages</term>, or code that other people 
+    have written for our use. You might also hear the term <term>dependencies</term>, which describes essentially the same thing: code
+    that our code depends on.</p>
 
-  <p>
-    Hi everyone, there's a bit of confusion going around with requirements.txt. This is simply a file in which you specify your project's dependencies, minus those which are already bundled into Python (e.g. csv).
+  <p>PyPI can be accessed with <c>pip</c>, which is the command that you will use when installing dependencies. Pip <em>should</em> come
+    preinstalled with most Python installations on Mac and Windows.</p>
 
-  You only need to provide this file if you're using external dependencies (numpy, scipy, sklearn, etc). The autograder has matplotlib bundled with it which is why you don't have to include it.
+  <p>Some common packages include: <c>requests</c> (for sending HTTP requests), <c>boto3</c> (for dealing with AWS), <c>flask</c> (for making websites), and more.</p>
 
-  One easy way to generate this file is by running this command in the terminal (while navigated to the directory of your final project):
+  <p>Some common packages for data science include <c>numpy</c>, <c>matplotlib</c>, <c>scipy</c>, <c>pandas</c> and more.</p>
+  
+  <p>But this is all sounding like a lot to keep track of, right? How can we ensure consistency between
+    versions installed on different people's computers?</p>
 
-  pip freeze > requirements.txt
+  <p><term>requirements.txt</term> is a file we can specify for others to be able install the dependencies
+    (which is needed to run our code), since others may not have our dependencies installed.</p>
 
-  Breakdown of what's happening (aside from generating the proper requirements.txt file):
-  pip is Python's dependency (aka "package") manager
-  freeze is just the command, no idea why it's called freeze. Educated guess: I think it's because it's "freezing" your dependencies at a moment in time (or in other words, at a specific version) and saving them to a file.
-  > is the Linux output redirection operator, which is going to take the result of pip freeze and redirect it to the file you provided, which is requirements.txt
+  <p>The following code represents a <c>requirements.txt</c> file that specifies numpy as a dependency:</p>
+  <program language="python">
+    <input>
+numpy==1.26.2
+    </input>
+  </program>
 
-  That's it! Your requirements.txt will be in a format like:
+  <p>Note that dependencies are not installed immediately. For someone to install the requirements which you specify,
+    they would run the command: <c>pip install -r requirements.txt</c>.</p>
 
-  numpy==1.26.2
+  <p>If you're unsure what version of a dependency you have installed, you can run the command: <c>pip show DEPENDENCY</c>, like <c>pip show numpy</c>.
+    Somewhat ironically, there are also packages that can autogenerate a requirements.txt file for you.</p>
 
-
-  (CS majors: read on for why this isn't great)
-
-  So actually, this will freeze ALL of your requirements. I ran this on my computer and had like a 100 line file of tons of dependencies, and we want people to install only what they have to (we want to minimize overhead/space taken up).
-
-  Probably the best way to do this is to pip show DEPENDENCY where DEPENDENCY is something like numpy, find the version, and type it into requirements.txt  in the format listed above. There are also packages (ironically) that do this.
-
-  You can also view all packages (and their versions) that people from around the world have created on PyPI. This even includes stuff TA Greg made custom for the autograder, and is also why we made you all install Anaconda (which, for the most part, automatically dealt with this)!
-  </p>
-
-
+  <note>One additional tip worth mentioning is to always specify the bare minimum requirements your code needs to work.
+    Dependencies normally have dependencies of their own, so we want to minimize the install time and space taken up
+    when someone is installing your program's requirements.</note>
 </section>
