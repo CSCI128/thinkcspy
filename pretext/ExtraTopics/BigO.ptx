@@ -2,21 +2,75 @@
 <section xml:id="extratopics-bigo">
   <title>Big O Analysis</title>
 
-  <!-- BOILERPLATE STUFF -->
-  <p>The goal of this book is to teach you to think like a computer scientist. This
-            way of thinking combines some of the best features of mathematics, engineering,
-            and natural science. Like mathematicians, computer scientists use formal
-            languages to denote ideas (specifically computations). Like engineers, they
-            design things, assembling components into systems and evaluating tradeoffs
-            among alternatives.  Like scientists, they observe the behavior of complex
-            systems, form hypotheses, and test predictions.</p>
-  <p>The single most important skill for a computer scientist is <term>problem
-                solving</term>. Problem solving means the ability to formulate problems, think
-            creatively about solutions, and express a solution clearly and accurately. As
-            it turns out, the process of learning to program is an excellent opportunity to
-            practice problem solving skills. That's why this chapter is called, <em>The Way of
-                the Program</em>.</p>
-  <p>On one level, you will be learning to program, a useful skill by itself. On
-            another level, you will use programming as a means to an end. As we go along,
-            that end will become clearer.</p>
+  <p>It's hard (if not impossible) to measure the performance of algorithms on a computer. We won't get 
+    deep into it, but this is due to things like variable hardware between computers and just general performance of software.</p>
+
+  <p>This is where <term>Big O Analysis</term> comes in. We can measure the performance of algorithms, or their <term>complexity</term>,
+    in a special mathematical notation.</p>
+
+  <p>This mathematical notation is denoted with a capital O (a <em>big o</em>!) followed by parenthesis, similar to a basic algebraic <c>f(x)</c>, though
+    it is <em>not</em> a function. Inside of the <c>O()</c> is most commonly a <c>1</c> or a <c>n</c> raised to some mathematical factor.</p>
+
+  <p>These factors have <em>magnitude</em>, which helps us to quantify how quick or slow an algorithm is.</p>
+  
+  <p>From left to right, left being the quickest time and right being the slowest time, we typically see these complexities:</p>
+  <p><c>O(1)</c>, <c>O(logn)</c>, <c>O(n)</c>, <c>O(nlogn)</c>, <c>O(n^2)</c>, <c>O(n^3)</c>, <c>O(2^n)</c>, <c>O(n!)</c>.</p>
+
+  <p>Something like an <c>O(nlogn)</c> gain in complexity might seem marginal or redundant, but it makes a 
+    difference at a large scale! Imagine your favorite big tech company and how they sift through <em>billions</em> of
+    users in a quick amount of time.</p>
+
+  <image source="ExtraTopics/Figures/complexity.png" width="75%" alt="Big O Complexity Graph"/>
+
+  <p>This figure shows complexities as a graph and which ones we do and don't like. Strive to never write something worse than <c>O(n^3)</c>!</p>
+
+  <p>Take the following code as an example:</p>
+  <program language="python">
+    <input>
+print(1)
+    </input>
+  </program>
+  <p>This code runs in <term>constant time</term>, or <c>O(1)</c>. Constant time operations are typically
+    things in code which <em>do not</em> loop.</p>
+
+  <p>Now, let's check out an example with a loop:</p>
+  <program language="python">
+    <input>
+def example_func(n):
+    for i in range(n):
+        print(i)
+    </input>
+  </program>
+  <p>As you can see, this function simply prints <c>0</c> to <c>n</c>. We measure the complexity of <c>example_func</c> as <c>O(n)</c></p>
+
+  <p>The <c>n</c> here is crucial; it's the upper bound of what our function iterates to. In this example, it will always iterate all the way, but
+    in an actual program, it may not, which leads to <term>worst case</term>, <term>average case</term>, and <term>best case</term> complexities.</p>
+
+  <p>In the last code example, <c>O(n)</c> was the complexity for <em>all</em> cases, because the loop <em>always</em> goes to <c>n</c>.</p>
+  
+  <p><term>Worst case</term> complexities are the worst possible performances of our code.
+    For instance, if you're searching through your contacts list for a name in top-to-bottom fashion,
+    in the worst case you'll check all <c>n</c> names, and hence your search algorithm's worst case
+    is <c>O(n)</c>. (Hint: We just described <term>linear search</term>!)</p>
+  
+  <p><term>Average case</term> complexities are the average performances of our code. In our
+    contact list example, the average case is also <c>O(n)</c>, because you will probably
+    have to search through an arbitrary <c>n</c> names to find, say, the 31st contact, out of 100.</p>
+
+  <p><term>Best case</term> complexities describe what happens in the best case with our code. In the contact list
+    example, the best case is <c>O(1)</c>; the contact you were looking for was the very first name in the list!</p>
+
+  <p>All of these lead nicely into a future chapter where we talk about search and sort algorithms, which are
+    closely related to Big O Analysis and are an important topic in computer science.</p>
+
+  <p>One more important topic in Big O Analysis is <term>simplification</term>. You will often be asked to do
+    this on assignments. We won't get too deep into the math, but the general rules are as follows:</p>
+
+  <p>Constant time operations always simplify to <c>O(1)</c>. You <em>can't</em> have complexities like <c>O(3)</c> or <c>O(1000000)</c>.</p>
+
+  <p>Added constants are ignored when a larger factor is around. For instance, <c>O(n + 1)</c> is just <c>O(n)</c>.</p>
+
+  <!-- TODO probably add a bit more here in a new section called Big O Simplification + Practice? -->
+
+  <!-- TODO we also need a O(n^2) example, and an O(n) that looks like O(n^2) -->
 </section>
