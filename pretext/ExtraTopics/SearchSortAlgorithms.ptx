@@ -2,5 +2,46 @@
 <section xml:id="extratopics-algorithms">
   <title>Search and Sort Algorithms</title>
 
+  <p>In computer science, we like algorithms! There are two types of algorithms
+    that are spoken about very often: search and sort. Not only are they great
+    for learning about Big O and algorithms, but they're very applicable in the real world.</p>
+
+  <p>As the internet grows and the data we store grows, companies have to wrestle with it, imagine if you're
+    [insert any big tech company here] and you're looking for <em>one</em> user out of <em>one billion</em>.
+    Now imagine you need to do that a thousand times a minute, with people doing it at the same time.
+    The code you write and the algorithms you use become <em>massively important</em> to how quickly
+    these operations can be done.</p>
+
+  <p><term>Linear search</term> is the most basic searching algorithm, and the most natural.
+    Quite simply, you look through whatever you're looking through in a linear order; from first to last.
+    This could be a stack of papers, or it could be a list in Python.</p>
+
+  <program language="python">
+    <input>
+# a program which finds 10 in my list, linearly
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for element in my_list:
+    if element == 10:
+        print('found 10!')
+        break
+    </input>
+  </program>
+
+  <p>Linear search has a best case complexity of <c>O(1)</c>, average case of <c>O(n)</c>, and worst case of <c>O(n)</c>.</p>
+
+  <p><term>Binary search</term> is an improvement upon linear search. Binary search splits the searched list in half,
+    and if the number we're searching for is less than that number, we know it must be in the left half of the list;
+    if it's greater, we know it must be in the right half of the list, and we can repeat this process until we find the number.</p>
+    
+  <p>Binary search has a best case complexity of <c>O(1)</c>, average case of <c>O(logn)</c>, and worst case of <c>O(logn)</c>.</p>
+
+  <p>However, there's a catch: for binary search to work, the list must be sorted! This is where more sorting algorithms come in.</p>
+
+  <p><term>Selection sort</term> is a simple sorting algorithm. The idea is that we take the smallest element and swap it with the leftmost element, 
+    and then the leftmost element becomes the sorted list. We repeat this process, and the sorted start of the list grows in size each time, so we're only
+    swapping from the nonsorted elements at the end of the list.</p>
   
+    <p>The time complexity of selection sort is <c>O(n^2)</c> in every case.</p>
+
+  <p>Some other common sorting algorithms include Bubble Sort and Insertion Sort, but we won't talk about those.</p>
 </section>
