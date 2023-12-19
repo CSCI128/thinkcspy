@@ -5,6 +5,7 @@
 4<xi:include href="./Packages.ptx"/>
 4<xi:include href="./BinaryRepresentations.ptx"/>
 4<xi:include href="./BigO.ptx"/>
+4<xi:include href="./More-BigO.ptx"/>
 4<xi:include href="./SearchSortAlgorithms.ptx"/>
 4<xi:include href="./Glossary.ptx"/>
 </chapter>

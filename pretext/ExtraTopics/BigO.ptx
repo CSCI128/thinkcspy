@@ -62,15 +62,4 @@ def example_func(n):
 
   <p>All of these lead nicely into a future chapter where we talk about search and sort algorithms, which are
     closely related to Big O Analysis and are an important topic in computer science.</p>
-
-  <p>One more important topic in Big O Analysis is <term>simplification</term>. You will often be asked to do
-    this on assignments. We won't get too deep into the math, but the general rules are as follows:</p>
-
-  <p>Constant time operations always simplify to <c>O(1)</c>. You <em>can't</em> have complexities like <c>O(3)</c> or <c>O(1000000)</c>.</p>
-
-  <p>Added constants are ignored when a larger factor is around. For instance, <c>O(n + 1)</c> is just <c>O(n)</c>.</p>
-
-  <!-- TODO probably add a bit more here in a new section called Big O Simplification + Practice? -->
-
-  <!-- TODO we also need a O(n^2) example, and an O(n) that looks like O(n^2) -->
 </section>
