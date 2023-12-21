@@ -43,7 +43,7 @@ print(3*(2+4)) # Grouping operator, changes the precedence expected result is 18
 <p> The first six operators have functionality that you're most probably pretty familiar with! On the other hand, we have two more operators that are used frequently in programming but not that much in math classes.
 These are integer division, and modulus. </p>
 
-<p> In the previous example <c> 5 / 3 </c> resulted <c> 1.66666666 </c>. This is because <c>/</c> always evaluates to a floating point result. However in certain situations we need integer results for divisions.
+<p> In the previous example <c> 5 / 3 </c> resulted <c> 1.66666666 </c>. This is because <c>/</c> always evaluates to a floating point result. However, in certain situations, we need an integer result from division.
 Here comes <term>Integer Division</term>,  <c> // </c> which is a division that its results are always rounds down to nearest integer (that's why you can also remember it as round down division). So for the previous example, <c> 5 // 3 </c> will result <c> 1 </c> </p>
 
 <p>The <term>modulus operator</term>, <c> % </c> works on integers (and integer expressions) and yields
