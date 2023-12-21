@@ -70,7 +70,7 @@ print(6%3) # Again 0!
 
    <p xml:id="simple-python-data_index-1">When a variable name appears in the place of an operand, it is replaced with
             the value that it refers to before the operation is performed.
-            For example, what if we wanted to convert 645 minutes into hours.
+            For example, what if we wanted to convert 645 minutes into hours?
            </p>
   <program xml:id="ch2_sec7_p3" interactive="activecode" language="python">
     <input>
