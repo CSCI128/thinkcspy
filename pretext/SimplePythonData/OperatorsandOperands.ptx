@@ -40,7 +40,7 @@ print(3*(2+4)) # Grouping operator, changes the precedence expected result is 18
     </input>
   </program>
 
-<p> First six operators have functionality that you're most probably pretty familiar with! On the other hand we have two more operators that are used frequently in programming but not that much in math classes.
+<p> The first six operators have functionality that you're most probably pretty familiar with! On the other hand, we have two more operators that are used frequently in programming but not that much in math classes.
 These are integer division, and modulus. </p>
 
 <p> In the previous example <c> 5 / 3 </c> resulted <c> 1.66666666 </c>. This is because <c>/</c> always evaluates to a floating point result. However in certain situations we need integer results for divisions.
