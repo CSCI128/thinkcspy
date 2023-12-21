@@ -93,7 +93,7 @@ print(my_new_str)
     </tabular>
   </table>
   <p>You should experiment with these
-            methods so that you understand what they do.  Note once again that the methods that return strings do not
+            methods so that you understand what they do.  Note once again that the methods that return strings do <em>not</em>
             change the original. </p>
   <program xml:id="ch3_sec5_p2" interactive="activecode" language="python">
     <input>
