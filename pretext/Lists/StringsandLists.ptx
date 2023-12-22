@@ -82,7 +82,7 @@ print(my_list.index("n")) # "n" is NOT an element in my_list, expected result is
     </input>
   </program>
 
-<p> <term> BONUS: </term> Check this example afer reading the next section (List Type Conversion Function) and spot the difference! </p>
+<p> <term> BONUS: </term> Check this example after reading the next section (List Type Conversion Function) and spot the difference! </p>
 
 <program xml:id="ch4_sec11_p6" interactive="activecode" language="python">
     <input>
@@ -108,8 +108,10 @@ print(char_by_char.index("great")) # "great" is NOT an element in char_by_char, 
 myname = "Edgar Allan Poe"
 namelist = myname.split()
 init = ""
-for aname in namelist:
-    init = init + aname[0]
+str1 = namelist[0]
+str2 = namelist[1]
+str3 = namelist[2]
+init = init + str1[0] + str2[0] + str3[0]
 print(init)
 </input>
       </program>
@@ -136,7 +138,7 @@ print(init)
           <p>EAP</p>
         </statement>
         <feedback>
-                    Yes, split creates a list of the three names.  The for loop iterates through the names and creates a string from the first characters.
+                    Yes, split creates a list of the three names.  
                 </feedback>
       </choice>
       <choice>
