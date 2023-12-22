@@ -6,7 +6,7 @@
     it can perform. For example, we can write <c>my_str.upper()</c> when we want the string <c>my_str</c> to perform the <c>upper()</c> method to create an upper-case version of itself.</p>
 
 
-  <p>Remember that Strings are <term> immutable. </term> Therefore all string methods gives us a new string. The original string is unchanged. </p>
+  <p>Remember that strings are <term> immutable</term>. Therefore, all string methods give us a new string and must be assigned to a new variable. The original string is unchanged.</p>
 
   <program xml:id="ch3_sec5_p1" interactive="activecode" language="python">
     <input>
