@@ -56,17 +56,17 @@ print("".join(wds))
   <p>
     <term>index Method in Lists and Strings</term>
   </p>
-<p> One important thing to note is that even though index methods work the same in the context of strings and lists, 
-  however, they look for different things. In the context of strings, 
-  index methods look for a substring (or a character), whereas in the context of lists, index methods look for an element. 
-  The following is a great example of how these methods differ, depending on the context. Play with them to see the differences! </p>
+<p> One important thing to note is that even though <c>index</c> methods is named the same in the context of strings and lists, they behave differently. 
+With strings, the index method looks for a substring (or a character), and returns the first instance of that character. 
+However, with lists, the index method looks for an element and returns the first instance of that element. </p>
+
 
 <program xml:id="ch4_sec11_p4" interactive="activecode" language="python">
     <input>
 
 my_str = "To a great mind, nothing is little,' remarked Holmes, sententiously."
 print(my_str.index("great")) # Finds the substring "great" in my_str, expected result is 5
-print(my_str.index("m")) # Finds the character "m" in my_str, expected result is 12
+print(my_str.index("n")) # Finds the character "n" in my_str, expected result is 13 (first occurence)
 
     </input>
   </program>
@@ -77,8 +77,8 @@ print(my_str.index("m")) # Finds the character "m" in my_str, expected result is
 my_str = "To a great mind, nothing is little,' remarked Holmes, sententiously."
 my_list = my_str.split() 
 print(my_list)
-print(my_list.index("great")) # Finds the element "great" in my_list, expected result is 3
-print(my_list.index("m")) # "m" is NOT an element in my_list, expected result is -1
+print(my_list.index("great")) # Finds the element "great" in my_list, expected result is 2
+print(my_list.index("n")) # "n" is NOT an element in my_list, expected result is an error
     </input>
   </program>
 
@@ -90,8 +90,8 @@ my_str = "To a great mind, nothing is little,' remarked Holmes, sententiously."
 
 char_by_char = list(my_str) 
 print(char_by_char)
-print(char_by_char.index("m")) # Finds the element "m" in char_by_char, expected result is 12
-print(char_by_char.index("great")) # "great" is NOT an element in char_by_char, expected result is -1
+print(char_by_char.index("n")) # Finds the element "n" in char_by_char, expected result is 13
+print(char_by_char.index("great")) # "great" is NOT an element in char_by_char, expected result is an error
 
         </input>
   </program>

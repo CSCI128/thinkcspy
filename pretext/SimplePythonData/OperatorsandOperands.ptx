@@ -24,7 +24,7 @@ minute / 60
 <li> <c> ** </c> exponentiation </li>
 <li> <c> () </c> grouping </li>
 <li> <c> // </c> integer division (round down division) </li>
-<li> <c> % </c> modulus (remainder) </li>
+<li> <c> % </c> modulo (remainder) </li>
 </ul>
 
 <p> There are several other operators that we will learn in future chapters. But these are the ones that you're going to need more or less all of your assignments! </p>
@@ -41,14 +41,13 @@ print(3*(2+4)) # Grouping operator, changes the precedence expected result is 18
   </program>
 
 <p> The first six operators have functionality that you're most probably pretty familiar with! On the other hand, we have two more operators that are used frequently in programming but not that much in math classes.
-These are integer division, and modulus. </p>
+These are integer division, and modulo. </p>
 
-<p> In the previous example <c> 5 / 3 </c> resulted <c> 1.66666666 </c>. This is because <c>/</c> always evaluates to a floating point result. However, in certain situations, we need an integer result from division.
-<term>Integer division</term>, or the <c> // </c> operator, is division such that its results are always rounded down to the nearest integer. So for the previous example, <c> 5 // 3 </c> will result <c> 1 </c> </p>
+<p> In the previous example <c> 5 / 3 </c> resulted <c> 1.66666666 </c>. This is because <c>/</c> always returns a floating point result. However, in certain situations, we need an integer result from division.
+<term>Integer division</term>, or the <c> // </c> operator, divides the number, but rounds it down to the nearest integer. So for the previous example, <c> 5 // 3 </c> will result <c> 1 </c> </p>
 
-<p>The <term>modulus operator</term>, <c> % </c> works on integers (and integer expressions) and yields
-            the remainder when the first operand is divided by the second (that's why you can also remember it as remainder operator). For example, <c> 5 % 3 </c> will result <c> 2 </c> as   <c> 5 = 3 * 1 + 2 </c>. 
-            The modulus operator can only give values between 0 and second integer minus 1. </p>
+<p>The <term>modulo operator</term>, <c> % </c> yields
+            the remainder when the first operand is divided by the second (that's why you can also remember it as remainder operator). For example, <c> 5 % 3 </c> will result <c> 2 </c> as   <c> 5 = 3 * 1 + 2 </c>.  </p>
 
   <program xml:id="ch2_sec7_p2" interactive="activecode" language="python">
     <input>
@@ -56,21 +55,14 @@ print(5//3) # Integer division operator, expected result is 1
 print(60//7) # Integer division operator, expected result is 8
 print(50//2) # Integer division operator works same as division operator when the result is integer
 
-print(5%3) # Modulus operator, expected result is 2
-print(60%7) # Modulus operator, expected result is 4
-
-# Modulus operator can only give values between 0 and second integer-1.
-print(3%3) # 0
-print(4%3) # 1 
-print(5%3) # 2 (3-1)
-print(6%3) # Again 0!
-
+print(5%3) # Modulo operator, expected result is 2
+print(60%7) # Modulo operator, expected result is 4
+print(4%2) # Modulo operator, expected result is 0
     </input>
   </program>
 
-   <p xml:id="simple-python-data_index-1">When a variable name appears in the place of an operand, it is replaced with
-            the value that it refers to before the operation is performed.
-            For example, what if we wanted to convert 645 minutes into hours?
+   <p xml:id="simple-python-data_index-1">When a variable name appears in place of an operand, 
+   python substitutes that variable name with its assigned value. For example, what if we wanted to convert 645 minutes into hours?
            </p>
   <program xml:id="ch2_sec7_p3" interactive="activecode" language="python">
     <input>
@@ -82,8 +74,7 @@ print(hours)
  
 
  
- 
-<p>The modulus operator turns out to be surprisingly useful. For example, you can
+<p>The modulo operator turns out to be surprisingly useful. For example, you can
             check whether one number is divisible by another&#x2014;if <c>x % y</c> is zero, then
     <c>x</c> is divisible by <c>y</c>.
             Also, you can extract the right-most digit or digits from a number.  For

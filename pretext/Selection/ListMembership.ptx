@@ -22,12 +22,12 @@ print("g" in my_list) # prints False because "g" is not an member in my_list by 
         </input>
   </program>
 
-</p>
 
 
   <p>
     <term>Check your understanding</term>
   </p>
+
   <exercise label="ch5_sec7_q1">
     <statement>
       <p>What is printed by the following statements?</p>
