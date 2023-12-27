@@ -2,26 +2,28 @@
 <section xml:id="extratopics-binaryrepresentations">
   <title>Binary Representations</title>
 
-  <p>Have you ever seen all of the "hacker" 01010110101010s in the movies? As you probably
-    know, this is called binary. But it's not really how modern day hacking works. However,
-    it is the basis of all of computing, and although you won't be typing 0s and 1s at a
-    keyboard all day, it's useful to know.</p>
+  <p>Have you ever seen all of the "hacker" 01010110101010s in the movies? As you might
+    know, this is called binary. But it's not actually how hacking works. However, binary
+    is the base of all of computing. Every word that you are reading right now was
+    transmitted to your computer as a series of 1's and 0's. Although you won't 
+    be typing 0's and 1's at a keyboard all day, binary is still useful to know.</p>
 
-  <p>Quick background: binary is a numbering system, just like decimal (the numbering system we use). 
-    Decimal uses the digits 0-9, but binary only uses the digits 0 and 1, which are called bits.</p>
-
-  <p>Binary deals with powers of two (hence the name), reading from right to left and starting at 0. 
-    If the bit is 0, it is "off" or ignored (or multiplied by 0); if the bit is 1, it is "on" and its
-    position in the number is the exponent with 2 as the base. Binary numbering is also called <term>base 2</term>
-    because of that. For instance:</p>
-
-  <p><c>1000</c> (base 2) = (1 * 2^3) + (0 * 2^2) + (0 * 2^1) + (0 * 2^0) = 8</p>
+  <p>Quick background: binary is a numbering system, just like decimal (the numbering system we normally use). 
+    Decimal uses the digits 0-9, but binary only uses the digits 0 and 1, which are called bits.
+    In other words, binary is just a different way of counting.</p>
 
   <p>Believe it or not, this is indirectly how you've been counting your entire life. For instance, in decimal numbering (base 10):</p>
 
   <p><c>1023</c> (base 10) = (1 * 10^3) + (0 * 10^2) + (2 * 10^1) + (3 * 10^0)</p>
 
-  <p>There are even more numbering systems, like octal, but you only need to understand binary for this course.</p>
+  <p>There are even more numbering systems, like hexadecimal and octal, but you only need to understand binary for this course.</p>
+  
+  <p>Binary deals with powers of two (hence the name), reading from right to left and starting at 0. 
+    If the bit is 0, it is "off" and the position is multiplied by 0; if the bit is 1, it is "on" and its
+    position in the number is the exponent with 2 as the base. Binary numbering is also called <term>base 2</term>
+    because of that. For instance:</p>
+
+  <p><c>1000</c> (base 2) = (1 * 2^3) + (0 * 2^2) + (0 * 2^1) + (0 * 2^0) = 8</p>
 
   <p><term>Converting decimal to binary</term>: A quick way to convert decimal to binary is to find the largest
     factor of 2 that will go into the number, and concatenate 1 if it goes into the number; concatenate 0 if not. Subtract

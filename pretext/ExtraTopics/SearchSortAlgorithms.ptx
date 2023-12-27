@@ -6,8 +6,8 @@
     that are spoken about very often: search and sort. Not only are they great
     for learning about Big O and algorithms, but they're very applicable in the real world.</p>
 
-  <p>As the internet grows and the data we store grows, companies have to wrestle with it, imagine if you're
-    [insert any big tech company here] and you're looking for <em>one</em> user out of <em>one billion</em>.
+  <p>As the internet grows and the data we store grows, companies have to wrestle with the large amounts of data
+    they have. Imagine if you're Google and you're looking for <em>one</em> user out of <em>one billion</em>.
     Now imagine you need to do that a thousand times a minute, with people doing it at the same time.
     The code you write and the algorithms you use become <em>massively important</em> to how quickly
     these operations can be done.</p>
@@ -27,7 +27,9 @@ for element in my_list:
     </input>
   </program>
 
-  <p>Linear search has a best case complexity of <c>O(1)</c>, average case of <c>O(n)</c>, and worst case of <c>O(n)</c>.</p>
+  <p>Linear search has a best case complexity of <c>O(1)</c>, average case of <c>O(n)</c>, and worst case of <c>O(n)</c>.
+    Remember from the Big O section: in the best case, the element we're looking for is the first element. But in the
+    average and worst cases, we will have to look through some <c>n</c> elements.</p>
 
   <p><term>Binary search</term> is an improvement upon linear search. Binary search splits the searched list in half,
     and if the number we're searching for is less than that number, we know it must be in the left half of the list;
@@ -41,7 +43,7 @@ for element in my_list:
     and then the leftmost element becomes the sorted list. We repeat this process, and the sorted start of the list grows in size each time, so we're only
     swapping from the nonsorted elements at the end of the list.</p>
   
-    <p>The time complexity of selection sort is <c>O(n^2)</c> in every case.</p>
+  <p>The time complexity of selection sort is <c>O(n^2)</c> in every case.</p>
 
   <p>Some other common sorting algorithms include Bubble Sort and Insertion Sort, but we won't talk about those.</p>
 </section>

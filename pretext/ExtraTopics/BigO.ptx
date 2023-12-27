@@ -13,11 +13,18 @@
 
   <p>These factors have <em>magnitude</em>, which helps us to quantify how quick or slow an algorithm is. 
     From left to right, left being the quickest time and right being the slowest time, we typically see these complexities:</p>
+
   <p><c>O(1)</c>, <c>O(logn)</c>, <c>O(n)</c>, <c>O(nlogn)</c>, <c>O(n^2)</c>, <c>O(n^3)</c>, <c>O(2^n)</c>, <c>O(n!)</c>.</p>
+
+  <p>Big O is like a limit: only the most significant terms matter as <c>n</c> approaches infinity. We will soon
+    explain how to simplify down to these common complexities.</p>
 
   <p>Something like an <c>O(nlogn)</c> gain in complexity might seem marginal or redundant, but it makes a 
     difference at a large scale! Imagine how Google is able sift through <em>billions</em> of
     users in a quick amount of time; whatever algorithm they pick will need to be as quick as possible.</p>
+
+  <p>These algorithms will perform differently in a lot of cases, so we can also
+    assign "grades" or certain levels to our complexities.</p>
 
   <p><term>Worst case</term> complexities are the worst possible performances of our code.
     For instance, if you're searching through your contacts list for a name in top-to-bottom fashion,
@@ -30,6 +37,8 @@
 
   <p><term>Best case</term> complexities describe what happens in the best case with our code. In the contact list
     example, the best case is <c>O(1)</c>; the contact you were looking for was the very first name in the list!</p>
+
+  <p>Unless other cases are explicitly mentioned, we will talk about Big O in the worst case when designing and analyzing programs.</p>
 
   <p>Take the following code as an example:</p>
   <program language="python">
@@ -53,7 +62,8 @@ def example_func(n):
     because whether <c>n = 100</c> or <c>n = 10000000</c>, as the complexity trends to infinity, it remains <c>O(n)</c>.</p>
 
   <p>The <c>n</c> here is crucial; it's the upper bound of what our function iterates to. In this example, it will always iterate all the way, but
-    in an actual program, it may not, which leads to <term>worst case</term>, <term>average case</term>, and <term>best case</term> complexities.</p>
+    in an actual program with branching (conditional if/elif/else statements), it may not, which leads to the aforementioned <term>worst case</term>, 
+    <term>average case</term>, and <term>best case</term> complexities.</p>
 
   <p>In the last code example, <c>O(n)</c> was the complexity for <em>all</em> cases, because the loop <em>always</em> goes to <c>n</c>.</p>
   

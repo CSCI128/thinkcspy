@@ -5,12 +5,12 @@
   <p><c>None</c>, or the <term>NoneType</term>, is a type which represents the <em>absence</em> of a value.
     But let's take a step back and think: why is this useful?</p>
 
-  <p>In Python, sometimes we don't want to return anything from a function. However, Python implicitly will return None 
-    anyways, because nothing was returned. You could also explicitly return None from a function <em>or</em> return a value,
+  <p>In Python, sometimes we don't want to return anything from a function. However, when we don't 
+    explicitly return anything from a function, Python will implicitly return None.
+    You could also explicitly return None from a function <em>or</em> return a value,
     and then you would have to check if the function returned something or not.</p>
 
-  <p>Whether this is good practice or not is debatable, but for the purposes of this
-    class, you should understand when None appears and why.</p>
+  <p>For the purposes of this class, you should just understand when None appears and why.</p>
 
   <p>Most commonly when students are learning about strings and lists, us educators see a similar issue, which links back
     to sections on <term>mutability</term>. Strings are immutable and lists are mutable, remember?</p>
