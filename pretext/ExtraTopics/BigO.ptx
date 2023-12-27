@@ -2,32 +2,40 @@
 <section xml:id="extratopics-bigo">
   <title>Big O Analysis</title>
 
-  <p>It's hard (if not impossible) to measure the performance of algorithms on a computer. We won't get 
-    deep into it, but this is due to things like variable hardware between computers and just general performance of software.</p>
+  <p>It's impossible to experimentally measure the theoretical performance of algorithms on a computer as the size of our data (which we call n, to some factor) goes to infinity,
+    or gets really big. We won't get deep into it, but this is due to things like variable hardware between computers and just general performance of software.</p>
 
-  <p>This is where <term>Big O Analysis</term> comes in. We can measure the performance of algorithms, or their <term>complexity</term>,
+  <p>This is where <term>Big O Analysis</term> comes in. We can measure the theoretical performance of algorithms, or their <term>complexity</term>,
     in a special mathematical notation.</p>
 
-  <p>This mathematical notation is denoted with a capital O (a <em>big o</em>!) followed by parenthesis, similar to a basic algebraic <c>f(x)</c>, though
-    it is <em>not</em> a function. Inside of the <c>O()</c> is most commonly a <c>1</c> or a <c>n</c> raised to some mathematical factor.</p>
+  <p>This mathematical notation is denoted with a capital O (a <em>big o</em>!) followed by parentheses.
+    Inside of the <c>O()</c> is most commonly a <c>1</c> or a <c>n</c> raised to some mathematical factor.</p>
 
-  <p>These factors have <em>magnitude</em>, which helps us to quantify how quick or slow an algorithm is.</p>
-  
-  <p>From left to right, left being the quickest time and right being the slowest time, we typically see these complexities:</p>
+  <p>These factors have <em>magnitude</em>, which helps us to quantify how quick or slow an algorithm is. 
+    From left to right, left being the quickest time and right being the slowest time, we typically see these complexities:</p>
   <p><c>O(1)</c>, <c>O(logn)</c>, <c>O(n)</c>, <c>O(nlogn)</c>, <c>O(n^2)</c>, <c>O(n^3)</c>, <c>O(2^n)</c>, <c>O(n!)</c>.</p>
 
   <p>Something like an <c>O(nlogn)</c> gain in complexity might seem marginal or redundant, but it makes a 
-    difference at a large scale! Imagine your favorite big tech company and how they sift through <em>billions</em> of
-    users in a quick amount of time.</p>
+    difference at a large scale! Imagine how Google is able sift through <em>billions</em> of
+    users in a quick amount of time; whatever algorithm they pick will need to be as quick as possible.</p>
 
-  <image source="ExtraTopics/Figures/complexity.png" width="75%" alt="Big O Complexity Graph"/>
+  <p><term>Worst case</term> complexities are the worst possible performances of our code.
+    For instance, if you're searching through your contacts list for a name in top-to-bottom fashion,
+    in the worst case you'll check all <c>n</c> names, and hence your search algorithm's worst case
+    is <c>O(n)</c>. (Hint: We just described <term>linear search</term>!)</p>
+  
+  <p><term>Average case</term> complexities are the average performances of our code. In our
+    contact list example, the average case is also <c>O(n)</c>, because you will probably
+    have to search through an arbitrary <c>n</c> names to find, say, the 31st contact, out of 100.</p>
 
-  <p>This figure shows complexities as a graph and which ones we do and don't like. Strive to never write something worse than <c>O(n^3)</c>!</p>
+  <p><term>Best case</term> complexities describe what happens in the best case with our code. In the contact list
+    example, the best case is <c>O(1)</c>; the contact you were looking for was the very first name in the list!</p>
 
   <p>Take the following code as an example:</p>
   <program language="python">
     <input>
-print(1)
+sum = 1 + 1
+print(sum)
     </input>
   </program>
   <p>This code runs in <term>constant time</term>, or <c>O(1)</c>. Constant time operations are typically
@@ -41,24 +49,17 @@ def example_func(n):
         print(i)
     </input>
   </program>
-  <p>As you can see, this function simply prints <c>0</c> to <c>n</c>. We measure the complexity of <c>example_func</c> as <c>O(n)</c></p>
+  <p>As you can see, this function simply prints <c>0</c> to <c>n</c>. We measure the complexity of <c>example_func</c> as <c>O(n)</c>,
+    because whether <c>n = 100</c> or <c>n = 10000000</c>, as the complexity trends to infinity, it remains <c>O(n)</c>.</p>
 
   <p>The <c>n</c> here is crucial; it's the upper bound of what our function iterates to. In this example, it will always iterate all the way, but
     in an actual program, it may not, which leads to <term>worst case</term>, <term>average case</term>, and <term>best case</term> complexities.</p>
 
   <p>In the last code example, <c>O(n)</c> was the complexity for <em>all</em> cases, because the loop <em>always</em> goes to <c>n</c>.</p>
   
-  <p><term>Worst case</term> complexities are the worst possible performances of our code.
-    For instance, if you're searching through your contacts list for a name in top-to-bottom fashion,
-    in the worst case you'll check all <c>n</c> names, and hence your search algorithm's worst case
-    is <c>O(n)</c>. (Hint: We just described <term>linear search</term>!)</p>
-  
-  <p><term>Average case</term> complexities are the average performances of our code. In our
-    contact list example, the average case is also <c>O(n)</c>, because you will probably
-    have to search through an arbitrary <c>n</c> names to find, say, the 31st contact, out of 100.</p>
+  <image source="ExtraTopics/Figures/complexity.png" width="75%" alt="Big O Complexity Graph"/>
 
-  <p><term>Best case</term> complexities describe what happens in the best case with our code. In the contact list
-    example, the best case is <c>O(1)</c>; the contact you were looking for was the very first name in the list!</p>
+  <p>This figure shows complexities as a graph and which ones we do and don't like. Strive to never write something worse than <c>O(n^3)</c>!</p>
 
   <p>All of these lead nicely into a future chapter where we talk about search and sort algorithms, which are
     closely related to Big O Analysis and are an important topic in computer science.</p>
