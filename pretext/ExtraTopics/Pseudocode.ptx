@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<section xml:id="extratopics-pseudocode">
+  <title>Pseudocode</title>
+
+  <p><term>Pseudocode</term> is a mix of English and code (in our case, Python) where 
+    programmers can plan out their programs.</p>
+
+  <p>Writing <term>pseudocode</term> can help if you're wanting to plan before you write
+    a program, take on a large or confusing programming task, or just as a way to
+    document your code with comments to make it more readable for yourself and others.</p>
+
+  <p>There isn't necessarily a right or wrong pseudocode (except wrong would be if you just wrote the program!).
+    Your pseudocode and language will probably look different from this, but should be along the same lines.</p>
+
+  <p>Take the following prompt for a problem:</p>
+
+  <blockquote>
+    Write a program that 
+  </blockquote>
+
+  <p>We can approach this problem first by writing the following pseudocode:</p>
+  <program language="python">
+    <input>
+
+    </input>
+  </program>
+
+  <p>This won't be something you see often, but let's reverse engineer and see what
+    existing Python code might look like in pseudocode.</p>
+
+  <program language="python">
+    <input>
+character = input()
+if character == "Yoda":
+    print("No! Try not. Do. Or do not. There is no try.")
+elif character == "Han Solo":
+    print("Never tell me the odds!")
+elif character == "Obi Wan Kenobi":
+    print("Use the Force, Luke.")
+else:
+    print("Character not found!")
+    </input>
+  </program>
+
+  <p>We could write the following pseudocode for this program:</p>
+  <program language="python">
+    <input>
+take user input for a Star Wars character
+if the character is Yoda, print "No! Try not. Do. Or do not. There is no try."
+if the character is Han Solo, print "Never tell me the odds!"
+if the character is Obi Wan Kenobi, "Use the Force, Luke."
+in all other cases, print that the character wasn't found
+    </input>
+  </program>
+
+  <p>As you may start to notice, Python is so close to the English language that pseudocode can often
+    be quickly translated into code.</p>
+</section>

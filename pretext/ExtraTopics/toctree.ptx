@@ -7,5 +7,7 @@
 4<xi:include href="./BigO.ptx"/>
 4<xi:include href="./More-BigO.ptx"/>
 4<xi:include href="./SearchSortAlgorithms.ptx"/>
+4<xi:include href="./DataScience.ptx"/>
+4<xi:include href="./Pseudocode.ptx"/>
 4<xi:include href="./Glossary.ptx"/>
 </chapter>
