@@ -10,6 +10,8 @@
   <p>Added constants are ignored when a larger factor is around. For instance, <c>O(n + 1)</c> is just <c>O(n)</c>.</p>
 
   <p>Multiplication by a constant factor simplifies to the factor, such as <c>O(3n)</c> becoming <c>O(n)</c>.</p>
+  
+  <p>Added polynomials are ignored when a larger factor is around. For instance, <c>O(n! + n)</c> is just <c>O(n!)</c>, or <c>O(n^2 + n)</c> is just <c>O(n^2)</c>.</p>
 
   <p>With nested loops, any inner loop factors are multiplied by the outer loop factor.</p>
 

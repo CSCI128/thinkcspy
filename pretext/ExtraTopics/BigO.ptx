@@ -3,7 +3,7 @@
   <title>Big O Analysis</title>
 
   <p>It's impossible to experimentally measure the theoretical performance of algorithms on a computer as the size of our data (which we call n, to some factor) goes to infinity,
-    or gets really big. We won't get deep into it, but this is due to things like variable hardware between computers and just general performance of software.</p>
+    or otherwise gets really big. We won't get deep into it, but this is due to things like variable hardware between computers and just general performance of software.</p>
 
   <p>This is where <term>Big O Analysis</term> comes in. We can measure the theoretical performance of algorithms, or their <term>complexity</term>,
     in a special mathematical notation.</p>
@@ -11,13 +11,13 @@
   <p>This mathematical notation is denoted with a capital O (a <em>big o</em>!) followed by parentheses.
     Inside of the <c>O()</c> is most commonly a <c>1</c> or a <c>n</c> raised to some mathematical factor.</p>
 
-  <p>These factors have <em>magnitude</em>, which helps us to quantify how quick or slow an algorithm is. 
+  <p>These factors have <em>magnitude</em>, which helps us to quantify how quick or slow an algorithm is relative to an input size <c>n</c>.
     From left to right, left being the quickest time and right being the slowest time, we typically see these complexities:</p>
 
   <p><c>O(1)</c>, <c>O(logn)</c>, <c>O(n)</c>, <c>O(nlogn)</c>, <c>O(n^2)</c>, <c>O(n^3)</c>, <c>O(2^n)</c>, <c>O(n!)</c>.</p>
 
-  <p>Big O is like a limit: only the most significant terms matter as <c>n</c> approaches infinity. We will soon
-    explain how to simplify down to these common complexities.</p>
+  <p>Big O is like a limit: only the most significant terms matter as <c>n</c> approaches infinity. In the next
+    section, we will explain how to simplify down to these common complexities.</p>
 
   <p>Something like an <c>O(nlogn)</c> gain in complexity might seem marginal or redundant, but it makes a 
     difference at a large scale! Imagine how Google is able sift through <em>billions</em> of
@@ -33,7 +33,8 @@
   
   <p><term>Average case</term> complexities are the average performances of our code. In our
     contact list example, the average case is also <c>O(n)</c>, because you will probably
-    have to search through an arbitrary <c>n</c> names to find, say, the 31st contact, out of 100.</p>
+    have to search through an arbitrary <c>n</c> names to find, say, the 31st contact, out of 100.
+    On average we expect this to be around <c>n/2</c> times, but as <c>n</c> increases, <c>n/2</c> will also increase with the same speed so we simplify it with <c>O(n)</c>.</p>
 
   <p><term>Best case</term> complexities describe what happens in the best case with our code. In the contact list
     example, the best case is <c>O(1)</c>; the contact you were looking for was the very first name in the list!</p>
