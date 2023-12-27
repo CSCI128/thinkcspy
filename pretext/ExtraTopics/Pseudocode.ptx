@@ -5,7 +5,7 @@
   <p><term>Pseudocode</term> is a mix of English and code (in our case, Python) where 
     programmers can plan out their programs.</p>
 
-  <p>Writing <term>pseudocode</term> can help if you're wanting to plan before you write
+  <p>Writing pseudocode can help if you're wanting to plan before you write
     a program, take on a large or confusing programming task, or just as a way to
     document your code with comments to make it more readable for yourself and others.</p>
 
@@ -15,15 +15,50 @@
   <p>Take the following prompt for a problem:</p>
 
   <blockquote>
-    Write a program that 
+    Write a program that takes in a fraction in the format <c>NUMERATOR/DENOMINATOR</c>
+    from the user and divides them <em>and</em> finds their remainder. Print out both results.
+    If the denominator is 0, print out an error message; if the denominator is anything else,
+    let the user run the program normally.
   </blockquote>
 
   <p>We can approach this problem first by writing the following pseudocode:</p>
   <program language="python">
     <input>
-
+take user input for fraction
+split the user input by "/"
+make a variable for numerator, type convert to int
+make a variable for denominator, type convert to int
+if the denominator is 0,
+    print an error message
+otherwise
+    make a variable for the numerator divided by denominator
+    make a variable for the numerator mod denominator
+    print out both variables
     </input>
   </program>
+
+  <p>As you can see, this is basically just a high level outline of your program. It may help you
+    better see the control flow of your program, or even remind you to do the small things, like
+    converting your string input to an integer if necessary.</p>
+
+  <p>This pseudocode can then be quickly converted to Python:</p>
+
+  <program language="python">
+    <input>
+fraction = input().split('/')
+numerator = int(fraction[0])
+denominator = int(fraction[1])
+if denominator == 0:
+    print("Error, your denominator is 0!")
+else:
+    result = numerator / denominator
+    remainder = numerator % denominator
+    print("Division:", result)
+    print("Remainder:", remainder)
+    </input>
+  </program>
+
+  <p>..and we're done! That's the pseudocode process.</p>
 
   <p>This won't be something you see often, but let's reverse engineer and see what
     existing Python code might look like in pseudocode.</p>
@@ -55,4 +90,6 @@ in all other cases, print that the character wasn't found
 
   <p>As you may start to notice, Python is so close to the English language that pseudocode can often
     be quickly translated into code.</p>
+
+  <p>Feel free to use pseudocode on exams if it helps you plan, and in your actual programs.</p>
 </section>
