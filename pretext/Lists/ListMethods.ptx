@@ -6,7 +6,7 @@
     As you remember, unlike strings, lists are mutable. As a consequence, list methods can have different behaviors than string methods. Let's look at these.</p>
 <ul>
 <li> <term>Return Type Methods:</term> These methods work the same way as string methods: they give us a value but keep the original list the same.</li>
-<li> <term>Mutating Methods:</term> These methods modify the list but do not return anything. We shouldn't use these methods on the right hand side of assignment.</li>
+<li> <term>Mutating Methods:</term> These methods modify the list but do not return anything Because of this, we shouldn't use these methods on the right hand side of assignment.</li>
 <li> <term>Hybrid Methods:</term> These methods behave as both mutating and return type methods. They change the list and also return a value.</li>
 </ul>
 
