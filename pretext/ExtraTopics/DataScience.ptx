@@ -5,13 +5,13 @@
   <p>As the world moves more and more towards storing and analyzing large amounts of data,
     data science is a vital skill for you to know, whether you're a computer science major or not.</p>
 
-  <p><term>The data science process</term> consists of three steps:</p>
+  <p><term>The data science process</term> consists of four steps:</p>
 
   <ol>
     <li>Obtain the data</li>
     <li>Clean the data</li>
     <li>Explore the data</li>
-    <!-- <li>Predict unknowns</li> -->
+    <li>Predict unknowns</li>
   </ol>
 
   <p>The step that always takes the longest is cleaning the data! Data can come in all sorts of different
@@ -28,5 +28,6 @@
   <p><term>Exploring the data</term>: We can do some analysis now! You may do some sort of statistical
     analysis or regression model, or you may simply graph values and look for relationships and trends visually.</p>
 
-  <!-- <p><term>Predicting unknowns</term>: </p> -->
+  <p><term>Predicting unknowns</term>: You may want to predict unknowns using machine learning, regression models,
+    or algorithms such as K-means clustering.</p>
 </section>
