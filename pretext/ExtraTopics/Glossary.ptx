@@ -4,8 +4,8 @@
 
   <glossary sorted="False">
     <gi>
-      <title>activecode</title>
-      <p>A unique interpreter environment that allows Python to be executed from within a web browser.</p>
+      <title>term</title>
+      <p>definition</p>
     </gi>
   </glossary>
 </section>

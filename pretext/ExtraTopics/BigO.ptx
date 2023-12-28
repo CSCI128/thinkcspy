@@ -72,6 +72,115 @@ def example_func(n):
 
   <p>This figure shows complexities as a graph and which ones we do and don't like. Strive to never write something worse than <c>O(n^3)</c>!</p>
 
-  <p>All of these lead nicely into a future chapter where we talk about search and sort algorithms, which are
+  <p>So what do these factors actually mean? Let's say we have an algorithm with the following complexities, but they all run with the same time (1 milliseconds) for n = 10. This table shows what will happen if we increase the n:</p>
+
+  <table>
+    <tabular>
+      <row>
+        <cell>
+          n
+        </cell>
+        <cell>
+          <c>O(log(n))</c>
+        </cell>
+        <cell>
+          <c>O(n)</c>
+        </cell>
+        <cell>
+          <c>O(n^3)</c>
+        </cell>
+        <cell>
+          <c>O(2^n)</c>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          10
+        </cell>
+        <cell>
+          1 ms
+        </cell>
+        <cell>
+          1 ms
+        </cell>
+        <cell>
+          1 ms
+        </cell>
+        <cell>
+          1 ms
+        </cell>
+      </row>
+      <row>
+        <cell>
+          11
+        </cell>
+        <cell>
+          1 ms
+        </cell>
+        <cell>
+          1.1 ms
+        </cell>
+        <cell>
+          ~1.3 ms
+        </cell>
+        <cell>
+          2 ms
+        </cell>
+      </row>
+      <row>
+        <cell>
+          20
+        </cell>
+        <cell>
+          1.3 ms
+        </cell>
+        <cell>
+          2 ms
+        </cell>
+        <cell>
+          8 ms
+        </cell>
+        <cell>
+          1 s
+        </cell>
+      </row>
+      <row>
+        <cell>
+          100
+        </cell>
+        <cell>
+          2 ms
+        </cell>
+        <cell>
+          10 ms
+        </cell>
+        <cell>
+          1 s
+        </cell>
+        <cell>
+          10^16 years
+        </cell>
+      </row>
+      <row>
+        <cell>
+          100000
+        </cell>
+        <cell>
+          5 ms
+        </cell>
+        <cell>
+          10 s
+        </cell>
+        <cell>
+          31 years
+        </cell>
+        <cell>
+          :)
+        </cell>
+      </row>
+    </tabular>
+  </table>
+
+  <p>This all leads nicely into a future chapter where we talk about search and sort algorithms, which are
     closely related to Big O Analysis and are an important topic in computer science.</p>
 </section>
