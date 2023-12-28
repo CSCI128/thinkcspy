@@ -2,10 +2,10 @@
 <section xml:id="extratopics-pseudocode">
   <title>Pseudocode</title>
 
-  <p><term>Pseudocode</term> is a mix of English and code (in our case, Python) where 
-    programmers can plan out their programs.</p>
+  <p><term>Pseudocode</term> is a mix of English and code (in our case, Python) that
+    programmers use to plan out their programs.</p>
 
-  <p>Writing pseudocode can help if you're wanting to plan before you write
+  <p>Writing pseudocode can help if you want to plan before you write
     a program, take on a large or confusing programming task, or just as a way to
     document your code with comments to make it more readable for yourself and others.</p>
 

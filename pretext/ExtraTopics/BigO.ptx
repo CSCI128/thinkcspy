@@ -2,8 +2,8 @@
 <section xml:id="extratopics-bigo">
   <title>Big O Analysis</title>
 
-  <p>It's impossible to experimentally measure the theoretical performance of algorithms on a computer as the size of our data (which we call n, to some factor) goes to infinity,
-    or otherwise gets really big. We won't get deep into it, but this is due to things like variable hardware between computers and just general performance of software.</p>
+  <p>It's impossible to experimentally measure the theoretical performance of algorithms on a computer as the size of our data (which we call n) goes to infinity,
+    or otherwise gets really big. We won't get too far into it, but suffice to say, it's impossible due to variations in computer hardware and software.</p>
 
   <p>This is where <term>Big O Analysis</term> comes in. We can measure the theoretical performance of algorithms, or their <term>complexity</term>,
     in a special mathematical notation.</p>
@@ -16,8 +16,8 @@
 
   <p><c>O(1)</c>, <c>O(logn)</c>, <c>O(n)</c>, <c>O(nlogn)</c>, <c>O(n^2)</c>, <c>O(n^3)</c>, <c>O(2^n)</c>, <c>O(n!)</c>.</p>
 
-  <p>Big O is like a limit: only the most significant terms matter as <c>n</c> approaches infinity. In the next
-    section, we will explain how to simplify down to these common complexities.</p>
+  <p>Big O is like a limit in that only the most significant terms matter as <c>n</c> approaches infinity. 
+    We will explain Big O simplifications in the next section.</p>
 
   <p>Something like an <c>O(nlogn)</c> gain in complexity might seem marginal or redundant, but it makes a 
     difference at a large scale! Imagine how Google is able sift through <em>billions</em> of

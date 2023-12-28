@@ -2,7 +2,7 @@
 <section xml:id="extratopics-algorithms">
   <title>Search and Sort Algorithms</title>
 
-  <p>In computer science, we like algorithms! There are two types of algorithms
+  <p>A major part of computer science is studying algorithms. There are two types of algorithms
     that are spoken about very often: search and sort. Not only are they great
     for learning about Big O and algorithms, but they're very applicable in the real world.</p>
 
@@ -45,5 +45,6 @@ for element in my_list:
   
   <p>The time complexity of selection sort is <c>O(n^2)</c> in every case.</p>
 
-  <p>Some other common sorting algorithms include Bubble Sort and Insertion Sort, but we won't talk about those.</p>
+  <p>Some other common sorting algorithms include Bubble Sort and Insertion Sort, but those are out of the
+    scope of this class.</p>
 </section>

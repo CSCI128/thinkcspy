@@ -5,7 +5,7 @@
   <p>One more important topic in Big O Analysis is <term>simplification</term>. You will often be asked to do
     this on assignments. We won't get too deep into the math, but here are a few general rules:</p>
 
-  <p>Constant time operations always simplify to <c>O(1)</c>. You <em>can't</em> have complexities like <c>O(3)</c> or <c>O(1000000)</c>.</p>
+  <p>Constant time operations always simplify to <c>O(1)</c>. For instance, <c>O(3)</c> and <c>O(1000000)</c> both simplify to <c>O(1)</c>.</p>
 
   <p>Added constants are ignored when a larger factor is around. For instance, <c>O(n + 1)</c> is just <c>O(n)</c>.</p>
 
