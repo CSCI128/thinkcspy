@@ -2,5 +2,31 @@
 <section xml:id="extratopics-datascience">
   <title>Data Science</title>
 
-  
+  <p>As the world moves more and more towards storing and analyzing large amounts of data,
+    data science is a vital skill for you to know, whether you're a computer science major or not.</p>
+
+  <p><term>The data science process</term> consists of three steps:</p>
+
+  <ol>
+    <li>Obtain the data</li>
+    <li>Clean the data</li>
+    <li>Explore the data</li>
+    <!-- <li>Predict unknowns</li> -->
+  </ol>
+
+  <p>The step that always takes the longest is cleaning the data! Data can come in all sorts of different
+    formats now, with anomalies, with blanks, and so much more. Careful steps should be taken to clean the
+    data and prepare it for the next steps.</p>
+
+  <p><term>Obtaining the data</term>: There are many, many sites online now which have a plethora of
+    data available for free (or paid) use. Your data will likely come in a .csv, .json, or SQL database format.</p>
+
+  <p><term>Cleaning the data</term>: This can vary, but ultimately, you need to prepare your data
+    and "wrangle" it into a format that is easily usable in the next steps. In this step, you may
+    also fix certain things, change missing data, or fill in wrong data.</p>
+
+  <p><term>Exploring the data</term>: We can do some analysis now! You may do some sort of statistical
+    analysis or regression model, or you may simply graph values and look for relationships and trends visually.</p>
+
+  <!-- <p><term>Predicting unknowns</term>: </p> -->
 </section>
