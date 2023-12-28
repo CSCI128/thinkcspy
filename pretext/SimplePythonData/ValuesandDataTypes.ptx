@@ -34,20 +34,6 @@ print("Hello, World")
 
   <p> You will get more familiar with functions (and design your own functions!) in the following weeks. </p>
   
-  <p>In the Python shell, it is not necessary to use the <c>print</c> function to see the values shown above.  The shell evaluates the Python function and automatically prints the result.  For example, consider the shell session shown below.  When
-            we ask the shell to evaluate <c>type("Hello, World!")</c>, it responds with the appropriate answer and then goes on to
-            display the prompt for the next use.</p>
-  <pre>Python 3.1.2 (r312:79360M, Mar 24 2010, 01:33:18)
-[GCC 4.0.1 (Apple Inc. build 5493)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
-&gt;&gt;&gt; type("Hello, World!")
-&lt;class 'str'&gt;
-&gt;&gt;&gt; type(17)
-&lt;class 'int'&gt;
-&gt;&gt;&gt; "Hello, World"
-'Hello, World'
-&gt;&gt;&gt;</pre>
-  <p>Note that in the last example, we simply ask the shell to evaluate the string <q>Hello, World</q>.  The result is as you might expect, the string itself.</p>
   <p>Continuing with our discussion of data types, numbers with a decimal point belong to a class
             called <term>float</term>, because these numbers are represented in a format called
             <em>floating-point</em>.  At this stage, you can treat the words <em>class</em> and <em>type</em>
