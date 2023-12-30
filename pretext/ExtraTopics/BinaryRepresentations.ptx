@@ -3,9 +3,8 @@
   <title>Binary Representations</title>
 
   <p>Have you ever seen all of the "hacker" 01010110101010s in the movies? As you might
-    know, this is called binary. But it's not actually how hacking works. However, binary
-    is the base of all of computing. Every word that you are reading right now was
-    transmitted to your computer as a series of 1's and 0's. Although you won't 
+    know, this is called binary. While it's not actually how hacking works, binary is still the base of all computing.
+    Every word that you are reading right now was transmitted to your computer as a series of 1's and 0's. Although you won't 
     be typing 0's and 1's at a keyboard all day, binary is still useful to know.</p>
 
   <p>Quick background: binary is a numbering system, just like decimal (the numbering system we normally use). 

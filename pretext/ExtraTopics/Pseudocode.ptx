@@ -5,9 +5,13 @@
   <p><term>Pseudocode</term> is a mix of English and code (in our case, Python) that
     programmers use to plan out their programs.</p>
 
-  <p>Writing pseudocode can help if you want to plan before you write
-    a program, take on a large or confusing programming task, or just as a way to
-    document your code with comments to make it more readable for yourself and others.</p>
+  <p>Writing pseudocode can be helpful for reasons such as:</p>
+  <ul>
+    <li>It's quicker to write than actual code!</li>
+    <li>It's readable to more people than actual code, and can still be critiqued like regular code.</li>
+    <li>It can help you to take on a large or confusing programming task.</li>
+    <li>It can help you to document your code with comments for yourself and others' readability.</li>
+  </ul>
 
   <p>There isn't necessarily a right or wrong pseudocode (except wrong would be if you just wrote the program!).
     Your pseudocode and language will probably look different from this, but should be along the same lines.</p>
@@ -16,7 +20,7 @@
 
   <blockquote>
     Write a program that takes in a fraction in the format <c>NUMERATOR/DENOMINATOR</c>
-    from the user and divides them <em>and</em> finds their remainder. Print out both results.
+    from the user and outputs the quotient and the remainder.
     If the denominator is 0, print out an error message; if the denominator is anything else,
     let the user run the program normally.
   </blockquote>
@@ -83,7 +87,7 @@ else:
 take user input for a Star Wars character
 if the character is Yoda, print "No! Try not. Do. Or do not. There is no try."
 if the character is Han Solo, print "Never tell me the odds!"
-if the character is Obi Wan Kenobi, "Use the Force, Luke."
+if the character is Obi Wan Kenobi, print "Use the Force, Luke."
 in all other cases, print that the character wasn't found
     </input>
   </program>
@@ -91,5 +95,5 @@ in all other cases, print that the character wasn't found
   <p>As you may start to notice, Python is so close to the English language that pseudocode can often
     be quickly translated into code.</p>
 
-  <p>Feel free to use pseudocode on exams if it helps you plan, and in your actual programs.</p>
+  <p>Feel free to use pseudocode on exams (for planning before writing code) and in your actual programs.</p>
 </section>

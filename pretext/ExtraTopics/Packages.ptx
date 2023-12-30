@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <section xml:id="extratopics-packages">
   <title>Packages and Dependencies</title>
+
+  <note>You won't ever need to deal with dependencies in this course unless you are adding modules to your final project.</note>
   
   <p>One key tenant of computer science (or anything, for that matter) is that we don't want to reinvent
     the wheel if we don't have to. A lot of very smart people have made very useful code, so why not use it?</p>
