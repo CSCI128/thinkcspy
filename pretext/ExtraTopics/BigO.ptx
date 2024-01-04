@@ -2,54 +2,66 @@
 <section xml:id="extratopics-bigo">
   <title>Big O Analysis</title>
 
-  <p>It's impossible to experimentally measure the theoretical performance of algorithms on a computer as the size of our data (which we call n) goes to infinity,
-    or otherwise gets really big. We won't get too far into it, but suffice to say, it's impossible due to variations in computer hardware and software.</p>
+  <p>A common question that comes up when programming is: "How long will my program take to run?". Even if a program provides the correct output, if it takes 
+  too long to finish then it is unacceptable. There is a problem here though, it's impossible to reliably say exactly how long a program will take to run. 
+  It depends on too many things. The capabilities of the computer running the code, what else is running on the computer, and the size of the input are just 
+  some of the things that would need to be considered.
+  </p>
 
-  <p>This is where <term>Big O Analysis</term> comes in. We can measure the theoretical performance of algorithms, or their <term>complexity</term>,
-    in a special mathematical notation.</p>
+  <p>To simplify this issue, we'll give up trying to estimate exactly how long a program will run, and instead look at the biggest factor that affect 
+  existing code: the size of the input. If we wrote a program that ran for 60 seconds on 100 megabytes of input data, how should we expect the program to 
+  react to 200 megabytes of input data? Maybe it would run in 120 seconds (twice the data for twice the run time)? Maybe it would still run in 60 seconds, 
+  assuming that extra data isn't used. Or maybe the program would run for far longer. The issue is that we don't know what the relationship is between the size 
+  of the input data and the behavior of the program.</p>
 
-  <p>This mathematical notation is denoted with a capital O (a <em>big o</em>!) followed by parentheses.
-    Inside of the <c>O()</c> is most commonly a <c>1</c> or a <c>n</c> raised to some mathematical factor.</p>
+  <p>This is where <term>Big O Analysis</term> comes in. Big O is a notation computer scientists use to describe the relationship between the size 
+  of the input data and the behavior of the program. These terms are written like a mathematical function using the variable n. n as a variable represents the 
+  size of the input data provided to the program. The Big O function tells us how n affects the time the program will take to complete.</p>
+  
+  <p>Consider the example we had before. We have a program that takes 60 seconds to run on 100 megabytes of input data, we'd like to know (roughly) 
+  how long the program might take to run on 200 megabytes of input data. If we know the run time of the program is the function f(n) = n^2, with n being 
+  the size of the data, now we have enough information to make a guess. If n is doubled, then the time the program runs for will quadruple! (2*n)^2 = 4 * n^2.</p>
 
-  <p>These factors have <em>magnitude</em>, which helps us to quantify how quick or slow an algorithm is relative to an input size <c>n</c>.
+  <p>The formal mathematical notation for Big O is denoted with a capital O (a <em>big o</em>!) followed by parentheses.
+    Inside of the <c>O()</c> is most commonly some term of n. In our previous example, we would say the program has O(n^2) behavior.</p>
+
+  <p>Different functions of n have different <em>magnitudes</em>, which helps us to quantify how quick or slow an algorithm is relative to the input size <c>n</c>.
     From left to right, left being the quickest time and right being the slowest time, we typically see these complexities:</p>
 
   <p><c>O(1)</c>, <c>O(logn)</c>, <c>O(n)</c>, <c>O(nlogn)</c>, <c>O(n^2)</c>, <c>O(n^3)</c>, <c>O(2^n)</c>, <c>O(n!)</c>.</p>
 
-  <p>Big O is like a limit in that only the most significant terms matter as <c>n</c> approaches infinity. 
-    We will explain Big O simplifications in the next section.</p>
+  <p>Big O is like a limit in that only the most significant terms matter as <c>n</c> gets bigger and bigger. We typically expect n to be very, VERY large because 
+  small inputs aren't as strongly affected by time limits. If a program takes 0.001 seconds to run with most normal data, is it really a big deal if it takes 0.004 
+  seconds on occasion? What if we were dealing with a program that had to run for a month though? Now that factor of four starts to hurt a lot more.</p>
 
-  <p>Something like an <c>O(nlogn)</c> gain in complexity might seem marginal or redundant, but it makes a 
-    difference at a large scale! Imagine how Google is able sift through <em>billions</em> of
-    users in a quick amount of time; whatever algorithm they pick will need to be as quick as possible.</p>
-
-  <p>These algorithms will perform differently in a lot of cases, so we can also
-    assign "grades" or certain levels to our complexities.</p>
-
-  <p><term>Worst case</term> complexities are the worst possible performances of our code.
-    For instance, if you're searching through your contacts list for a name in top-to-bottom fashion,
-    in the worst case you'll check all <c>n</c> names, and hence your search algorithm's worst case
-    is <c>O(n)</c>. (Hint: We just described <term>linear search</term>!)</p>
+  <p>There is another important aspect that we have ignored up to this point: programs can often have wildly different behavior depending on their input. 
+  Consider a contrived example:</p>
+  <program language="python">
+    <input>
+var = input()
+if 'a' in var:
+	while True:
+		print("run forever!")
+else:
+	print("done")
+    </input>
+  </program>
   
-  <p><term>Average case</term> complexities are the average performances of our code. In our
-    contact list example, the average case is also <c>O(n)</c>, because you will probably
-    have to search through an arbitrary <c>n</c> names to find, say, the 31st contact, out of 100.
-    On average we expect this to be around <c>n/2</c> times, but as <c>n</c> increases, <c>n/2</c> will also increase with the same speed so we simplify it with <c>O(n)</c>.</p>
+  <p>In this program, the size of the input doesn't matter as much as whether the input string contains a letter "a" or not. If it does, the program runs forever. 
+  If it doesn't, the program ends almost immediately. How do we reconcile this with our Big O notation? The answer is to be a pessimist. We adopt the assumption that 
+  everything that can happen to slow down our program will happen. In the code above, we assume that the input ALWAYS will contain an "a". This assumption is broadly 
+  known as the "worst case". Big O notation uses this assumption in every instance you will see it (at least in this class).
 
-  <p><term>Best case</term> complexities describe what happens in the best case with our code. In the contact list
-    example, the best case is <c>O(1)</c>; the contact you were looking for was the very first name in the list!</p>
-
-  <p>Unless other cases are explicitly mentioned, we will talk about Big O in the worst case when designing and analyzing programs.</p>
-
-  <p>Take the following code as an example:</p>
+  <p>Let's look at some more examples:</p>
   <program language="python">
     <input>
 sum = 1 + 1
 print(sum)
     </input>
   </program>
-  <p>This code runs in <term>constant time</term>, or <c>O(1)</c>. Constant time operations are typically
-    things in code which <em>do not</em> loop.</p>
+  <p>This code has a Big O of <c>O(1)</c>, also referred to as <term>constant time</term>. This is because the program does nothing with its input. In fact, it doesn't
+  even take input! Constant time operations are typically things in code which <em>do not</em> loop. A constant time program suggests it will always finish in a 
+  consistent amount of time, no matter what happens.</p>
 
   <p>Now, let's check out an example with a loop:</p>
   <program language="python">
@@ -59,20 +71,19 @@ def example_func(n):
         print(i)
     </input>
   </program>
-  <p>As you can see, this function simply prints <c>0</c> to <c>n</c>. We measure the complexity of <c>example_func</c> as <c>O(n)</c>,
+  <p>As you can see, this function simply prints <c>0</c> to <c>n</c>. Each print takes a little time, so a larger n means a longer program run time.
+   We denote the complexity of <c>example_func</c> as <c>O(n)</c>,
     because whether <c>n = 100</c> or <c>n = 10000000</c>, as the complexity trends to infinity, it remains <c>O(n)</c>.</p>
-
-  <p>The <c>n</c> here is crucial; it's the upper bound of what our function iterates to. In this example, it will always iterate all the way, but
-    in an actual program with branching (conditional if/elif/else statements), it may not, which leads to the aforementioned <term>worst case</term>, 
-    <term>average case</term>, and <term>best case</term> complexities.</p>
 
   <p>In the last code example, <c>O(n)</c> was the complexity for <em>all</em> cases, because the loop <em>always</em> goes to <c>n</c>.</p>
   
   <image source="ExtraTopics/Figures/complexity.png" width="75%" alt="Big O Complexity Graph"/>
 
-  <p>This figure shows complexities as a graph and which ones we do and don't like. Strive to never write something worse than <c>O(n^3)</c>!</p>
+  <p>This figure shows complexities as a graph and which ones are considered "desirable" or at least "acceptable". Context mostly determines if these are "good" terms or not,
+  but do strive to never write something worse than <c>O(n^3)</c>!</p>
 
-  <p>So what do these factors actually mean? Let's say we have an algorithm with the following complexities, but they all run with the same time (1 milliseconds) for n = 10. This table shows what will happen if we increase the n:</p>
+  <p>It may be difficult to appreciate the implications of these terms when first seeing them. Let's say we have an algorithm with the following complexities, but they 
+  all run with the same time (1 milliseconds) for n = 10. This table shows what will happen if we increase the size of the input:</p>
 
   <table>
     <tabular>
@@ -181,6 +192,11 @@ def example_func(n):
     </tabular>
   </table>
 
-  <p>This all leads nicely into a future chapter where we talk about search and sort algorithms, which are
-    closely related to Big O Analysis and are an important topic in computer science.</p>
+  <p>As you can see, what started off as a negligible difference exploded into a totally unacceptable time for larger input sizes applied to larger Big O terms. Examples like these are precisely why 
+  computer scientists are so fixated on Big O. 100000 data points is not a lot of data. Large tech companies are often running code on billions or 
+  trillions of data points, and anything less the most efficient code won't be able to run at-scale.</p>
+  
+  <p>We will end this section with a disclaimer. We have only covered the bare basic concepts of Big O here today. If you continue to study computer science, 
+  you'll have more opportunities to explore it in much more detail, including seeing the formal definition of Big O as well as learning how to determine the Big O of your own code.
+  For this specific class, we only ask you to be familiar with the notation of Big O and have a basic intuition behind what it communicates.</p>
 </section>
