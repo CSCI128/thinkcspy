@@ -12,8 +12,8 @@
     The code you write and the algorithms you use become <em>massively important</em> to how quickly
     these operations can be done.</p>
 
-  <p><term>Linear search</term> is the most basic searching algorithm, and the most natural.
-    Quite simply, you look through whatever you're looking through in a linear order; from first to last.
+  <p><term>Linear search</term> is the most basic searching algorithm, and the most intuitive.
+    Quite simply, you look through whatever you're considering in a linear order; from first to last.
     This could be a stack of papers, or it could be a list in Python.</p>
 
   <program language="python">
@@ -33,18 +33,18 @@ for element in my_list:
 
   <p><term>Binary search</term> is an improvement upon linear search. Binary search splits the searched list in half,
     and if the number we're searching for is less than that number, we know it must be in the left half of the list;
-    if it's greater, we know it must be in the right half of the list, and we can repeat this process until we find the number.</p>
+    if it's greater, we know it must be in the right half of the list, and we can repeat this process on smaller portions of the list until we find the number.</p>
     
   <p>Binary search has a best case complexity of <c>O(1)</c>, average case of <c>O(logn)</c>, and worst case of <c>O(logn)</c>.</p>
 
-  <p>However, there's a catch: for binary search to work, the list must be sorted! This is where more sorting algorithms come in.</p>
+  <p>However, there's a catch: for binary search to work, the list must be sorted! This is where sorting algorithms can come in. Sorting will not be covered in 
+  this class, but we will describe one sorting algorithm for those that are curious.</p>
 
   <p><term>Selection sort</term> is a simple sorting algorithm. The idea is that we take the smallest element and swap it with the leftmost element, 
-    and then the leftmost element becomes the sorted list. We repeat this process, and the sorted start of the list grows in size each time, so we're only
-    swapping from the nonsorted elements at the end of the list.</p>
+    and then the leftmost element becomes the sorted list. We repeat this process, and the sorted portion of the list grows in size each time, so we're only
+    adding elements from the nonsorted portion of the list to the end of the sorted part of the list.</p>
   
   <p>The time complexity of selection sort is <c>O(n^2)</c> in every case.</p>
 
-  <p>Some other common sorting algorithms include Bubble Sort and Insertion Sort, but those are out of the
-    scope of this class.</p>
+  <p>Some other common sorting algorithms include Bubble Sort and Insertion Sort, but we will leave those for another class.</p>
 </section>

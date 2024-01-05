@@ -2,6 +2,9 @@
 <section xml:id="extratopics-pseudocode">
   <title>Pseudocode</title>
 
+ <p>With the introduction of conditionals and branching, our programs are about to become more complex on average. This is a good time to introduce a technique
+ that will help you plan and structure your programs before you start writing the more complex code. That technique is to use pseudocode.</p>
+
   <p><term>Pseudocode</term> is a mix of English and code (in our case, Python) that
     programmers use to plan out their programs.</p>
 
@@ -13,7 +16,7 @@
     <li>It can help you to document your code with comments for yourself and others' readability.</li>
   </ul>
 
-  <p>There isn't necessarily a right or wrong pseudocode (except wrong would be if you just wrote the program!).
+  <p>There isn't necessarily a right or wrong syntax for pseudocode (except wrong would be if you just wrote the program!).
     Your pseudocode and language will probably look different from this, but should be along the same lines.</p>
 
   <p>Take the following prompt for a problem:</p>
@@ -45,7 +48,7 @@ otherwise
     better see the control flow of your program, or even remind you to do the small things, like
     converting your string input to an integer if necessary.</p>
 
-  <p>This pseudocode can then be quickly converted to Python:</p>
+  <p>This pseudocode can then be more readily converted to Python:</p>
 
   <program language="python">
     <input>
