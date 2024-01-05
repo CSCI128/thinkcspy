@@ -50,7 +50,7 @@ else:
   <p>In this program, the size of the input doesn't matter as much as whether the input string contains a letter "a" or not. If it does, the program runs forever. 
   If it doesn't, the program ends almost immediately. How do we reconcile this with our Big O notation? The answer is to be a pessimist. We adopt the assumption that 
   everything that can happen to slow down our program will happen. In the code above, we assume that the input ALWAYS will contain an "a". This assumption is broadly 
-  known as the "worst case". Big O notation uses this assumption in every instance you will see it (at least in this class).
+  known as the "worst case". Big O notation uses this assumption in every instance you will see it (at least in this class).</p>
 
   <p>Let's look at some more examples:</p>
   <program language="python">
