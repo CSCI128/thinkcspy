@@ -26,9 +26,8 @@ print("Hello, World")
     <p>When we show the value of a string using the <c>print</c> function, such as in the third example above, the quotes are not present in the output.  The
                 value of the string is the sequence of characters inside the quotes.  The quotes are only necessary to help Python know what the value is.</p>
   </note>
-  <p>You may have used function notation in a math class, like <c>y = f(x)</c>, likely only for functions that act on a single numeric value, and produce a single numeric value.  
-  In Python we have no such restrictions: In programming, a function is like a mini-program designed to perform a specific task. When you "call" a function, you're asking it to execute its task. 
-  Functions can take in information, known as parameters, work with that information, and then often return a result.  
+  <p>In programming, a function is a subroutine, designed to perform a specific task. When you "call" a function, you're asking it to execute its task. 
+  Functions can take in information, known as arguments, work with that information, and then often return a result.  
   For example, <em>print()</em> is a function which takes in a single string argument between the parentheses and performs the task: 
   Printing the string argument we provided to the terminal.</p>
 
