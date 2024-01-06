@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="strings_string-methods">
   <title>String Methods</title>
-  <p>We previously used a few functions like <c>print()</c> and <c>len()</c> where we place the variable inside the paranthesis such as <c>len(my_str)</c>. On the other hand, a <b>method</b> is a function that is attached to a specific Python object. 
+  <p>We previously used a few functions like <c>print()</c> and <c>len()</c> where we place the variable inside the parentheses such as <c>len(my_str)</c>. On the other hand, a <b>method</b> is a function that is attached to a specific Python object. 
     To access this function, we write the object, then a dot <c>.</c>, and then the name of the method.   The "dot notation" is the way we connect the name of an object to the name of a method
     it can perform. For example, we can write <c>my_str.upper()</c> when we want the string <c>my_str</c> to perform the <c>upper()</c> method to create an upper-case version of itself.</p>
 
