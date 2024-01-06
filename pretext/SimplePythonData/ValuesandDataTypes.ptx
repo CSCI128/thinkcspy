@@ -29,7 +29,7 @@ print("Hello, World")
   <p>You may have used function notation in a math class, like <c>y = f(x)</c>, likely only for functions that act on a single numeric value, and produce a single numeric value.  
   In Python we have no such restrictions: In programming, a function is like a mini-program designed to perform a specific task. When you "call" a function, you're asking it to execute its task. 
   Functions can take in information, known as parameters, work with that information, and then often return a result.  
-  For example, <em>print()</em> is a function, takes its parameter in between its paranthesis and its performs the task: 
+  For example, <em>print()</em> is a function which takes in a single string argument between the parentheses and performs the task: 
   Printing the string argument we provided to the terminal.</p>
 
   <p> You will get more familiar with functions (and design your own functions!) in the following weeks. </p>
