@@ -4,7 +4,7 @@
 4<xi:include href="./intro-WorkingwithDataFiles.ptx"/>
 4<xi:include href="./FindingaFileonyourDisk.ptx"/>
 4<xi:include href="./WithStatements.ptx"/>
-4<xi:include href="./ReadingaFile.ptx"/>
+<!-- 4<xi:include href="./ReadingaFile.ptx"/> merged into the chapter below -->
 4<xi:include href="./Iteratingoverlinesinafile.ptx"/>
 4<xi:include href="./AlternativeFileReadingMethods.ptx"/>
 4<xi:include href="./WritingTextFiles.ptx"/>
