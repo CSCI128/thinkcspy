@@ -24,4 +24,56 @@ print(myfile)
   <note>A word of caution: <term>once you read all the lines from a file, it is "spent"</term>;
   that is to say, if we tried to read from <c>myfile</c> again in the example above, it would not
   work. We would have to open the file again to read again.</note>
+
+  <p>In this course, you likely will not see the following syntax, but it's still useful to know that it's out there:</p>
+  <p>In Python, we can call the <c>open</c> function to <term>open</term> files before we can use them and the <c>close</c> function to <term>close</term> them when we are done with them. As you might expect, once a file is opened it becomes a Python object just like all other data. <xref ref="files_files_filemethods1a"/> shows the functions and methods that can be used to open and close files.</p>
+  <table xml:id="files_files_filemethods1a">
+    <tabular>
+      <row header="yes">
+        <cell>
+          <term>Method Name</term>
+        </cell>
+        <cell>
+          <term>Use</term>
+        </cell>
+        <cell>
+          <term>Explanation</term>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>open</c>
+        </cell>
+        <cell>
+          <c>open(filename,'r')</c>
+        </cell>
+        <cell>
+                            Open a file called filename and use it for reading.  This will return a reference to a file object.
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>open</c>
+        </cell>
+        <cell>
+          <c>open(filename,'w')</c>
+        </cell>
+        <cell>
+                            Open a file called filename and use it for writing.  This will also return a reference to a file object.
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>close</c>
+        </cell>
+        <cell>
+          <c>filevariable.close()</c>
+        </cell>
+        <cell>
+                            File use is complete.
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+
 </section>
