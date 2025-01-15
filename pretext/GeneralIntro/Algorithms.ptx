@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <section xml:id="general-intro_algorithms">
   <title>Algorithms</title>
+
+  <c>hello</c>
+
   <p>If problem solving is a central part of computer science, then the solutions that you create through
             the problem solving process are also important.  In computer science, we refer to these solutions
             as <term>algorithms</term>.  An algorithm is a step by step list of instructions that if followed exactly will solve the problem under consideration.</p>
