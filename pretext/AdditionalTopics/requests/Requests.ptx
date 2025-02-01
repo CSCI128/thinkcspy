@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<section xml:id="extratopics-requests">
+  <title>Requests and Responses</title>
+
+  <p><term>Requests</term> are sent by applications that want data. Your web browser
+  sent a request to a computer (we call these servers) owned by Runestone asking for this
+  chapter of the book.</p>
+
+  <p><term>Responses</term> are sent back for each request. Responses include data - whether
+  that's the page you're viewing, or simply JSON.</p>
+
+
+</section>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<section xml:id="extratopics-json">
+  <title>JSON</title>
+
+  <p><term>JSON</term>, or JavaScript Object Notation, is a data format which
+  is used all over the web. Requests and responses (which we'll talk about next)
+  are sent with JSON.</p>
+
+  
+
+</section>
