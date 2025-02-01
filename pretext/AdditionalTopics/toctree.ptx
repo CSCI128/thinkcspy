@@ -12,6 +12,10 @@
 4<xi:include href="./Aliasingandcopying.ptx"/>
 4<xi:include href="./ListComprehensions.ptx"/>
 4<xi:include href="./DictionaryComprehensions.ptx"/>
+4<xi:include href="./APIs_Introduction.ptx"/>
+4<xi:include href="./APIs_JSON.ptx"/>
+4<xi:include href="./APIs_Requests.ptx"/>
+4<xi:include href="./APIs_Example.ptx"/>
 4<xi:include href="./Glossary.ptx"/>
 4<xi:include href="./video-more-python.ptx"/>
 </chapter>
