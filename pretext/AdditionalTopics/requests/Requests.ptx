@@ -2,6 +2,9 @@
 <section xml:id="extratopics-requests">
   <title>Requests and Responses</title>
 
+  <p>We've spoken about APIs, HTTP, and JSON. Now we can understand what's going
+  on between the three and how data is transferred.</p>
+
   <p><term>Requests</term> are sent by applications that want data. Your web browser
   sent a request to a computer (we call these servers) owned by Runestone asking for this
   chapter of the book.</p>
@@ -9,5 +12,35 @@
   <p><term>Responses</term> are sent back for each request. Responses include data - whether
   that's the page you're viewing, or simply JSON.</p>
 
+  <p>There are different types, or <term>methods</term> of requests. For our purposes
+  here, you only need to know about <c>GET</c> and <c>POST</c>.</p>
 
+  <p><c>GET</c> retrieves data. For instance, if you send a request to <c>GET google.com</c>, you will
+  receive the HTML for the front page of Google. (This isn't a super useful visual. 
+  This is why web browsers exist.) Or, maybe you have a website which has a list of
+  classes available at Mines which you can send a GET request to. It would give something back like:</p>
+  <pre>
+{
+  courses: [
+    {
+      "name": "Computer Science for STEM",
+      "code": "CSCI128"
+      "term": "Fall 2025"
+    },
+    {
+      "name": "Physics I",
+      "code": "PHGN100"
+      "term": "Spring 2023"
+    },
+    ...
+  ]
+}
+  </pre>
+
+  <p>This is the useful case to us - we will request data and get it back in a <term>response</term>,
+  usually in JSON.</p>
+
+  <p>Responses also have codes attached to them; this is where the famous Error 404 "Not Found" comes from.
+  This is HTTP status that is sent back if the requested resource can't be found. You might also commonly
+  see codes like <c>200 OK</c>, <c>401 Unauthorized</c>, <c>403 Forbidden</c>, and <url href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" visual="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">more</url>.</p>
 </section>

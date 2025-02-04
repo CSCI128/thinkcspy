@@ -1,5 +1,45 @@
 <?xml version="1.0"?>
 <section xml:id="extratopics-example">
-  <title>Example</title>
+  <title>Request Example</title>
 
+  <p>
+    <url href="https://openweathermap.org/api" visual="https://openweathermap.org/api">OpenWeatherMap</url>
+    is an API that provides data about the weather. We will use it as our example here and
+    retrieve the weather in Golden.
+  </p>
+  
+  <p>Note that for this API, you will have to generate an <term>API key</term>, which
+  is a random sequence of characters which is like a "password" for you to access the API.
+  As such, you will have to make an account with OpenWeatherMap (it's free), generate an API
+  key, and then use it in the code below.</p>
+
+  <p>Copy this code into your code editor and modify the <c>API_KEY</c> variable. Run the code.</p>
+  <pre>
+import requests
+
+API_KEY='TODO'
+
+# Get location data for Golden
+resp = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q=Golden,CO,USA&amp;appid={API_KEY}')
+resp = resp.json()
+
+# Get the weather in Golden!
+resp = requests.get(f'https://api.openweathermap.org/data/2.5/weather?lat=39.7546349&amp;lon=-105.22058&amp;units=imperial&amp;appid={API_KEY}')
+resp = resp.json()
+print(resp)
+  </pre>
+
+  <p>In this code snippet, we can see the <c>requests</c> module (provided by Python by default)
+  is fairly straightforward: it defines a function <c>.get()</c> to send a GET request to the specified URL.
+  Then, we can simply call <c>.json()</c> on the response variable to get the response as JSON.</p>
+
+  <p>This would look like:</p>
+  <pre>
+
+  </pre>
+
+  <p>We can then use Python dictionary notation to get certain parts of the data out:</p>
+  <pre>
+
+  </pre>
 </section>
