@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<section xml:id="extratopics-conclusion">
+  <title>Conclusion</title>
+
+  <p>In this section, you learned about HTTP, JSON, requests and responses,
+  request methods and response codes, and the Python requests module
+  and how to make a web request to get data.</p>
+
+  <p>One thing we glossed over is <term>authentication</term>. Often times,
+  sites only want certain people to use their APIs. Or, they want to limit
+  the amount of requests you can make (and make you pay for more). Thus,
+  there needs to be a concept of whether or not a user is signed in (authentication) 
+  and has the right permissions (authorization).</p>
+
+  <p>API keys are just one form of authentication. Different (and more secure)
+  authentication methods like OAuth2 exist and may be required depending on 
+  what API you use.</p>
+
+  <p>There are so many APIs out there - and once you grab the data, it's
+  just like any other program. You could load your data into a matplotlib graph,
+  or display it to a user in the terminal.</p>
+</section>

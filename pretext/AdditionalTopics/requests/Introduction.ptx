@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<section xml:id="extratopics-apis-introduction">
+  <title>Web Requests</title>
+
+  <p>Web requests, or API requests, are a way that data transfers over the internet.
+  We're (optionally) teaching them in this chapter in case you want to learn how to
+  grab data from different sources online.</p>
+
+  <p>An API, or <term>Application Programming Interface</term>, is a tool for developers 
+  to safely interact with a program and its data, made by the developers of the original program. 
+  It's an “outward-facing part” of a program. We don't want everyone to have our program's
+  data, but maybe we want certain information to be accessible by anyone.</p>
+
+  <p>
+    There are a plethora of APIs you can use (going even beyond this list):
+    <url href="https://github.com/public-apis/public-apis" visual="https://github.com/public-apis/public-apis">https://github.com/public-apis/public-apis</url>
+  </p>
+
+  <p>APIs work over HTTP. <term>HTTP</term>, or the HyperText Transfer Protocol, is the basis of the web.
+  It defines <term>requests</term> and <term>responses</term> which we'll talk about shortly.
+  You've probably heard of HTTP before; you're viewing this page over HTTP right now! (Actually
+  HTTPS, which is secure HTTP.)</p>
+</section>
