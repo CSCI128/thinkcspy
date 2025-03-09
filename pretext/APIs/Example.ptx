@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<section xml:id="extratopics-example">
+  <title>Request Example</title>
+
+  <p>
+    <url href="https://openweathermap.org/api" visual="https://openweathermap.org/api">OpenWeatherMap</url>
+    is an API that provides data about the weather. We will use it as our example here and
+    retrieve the weather in Golden.
+  </p>
+  
+  <p>APIs have different "endpoints", or different URLs which give different data.
+  In this example, we will be using two different endpoints:</p>
+
+  <p><c>http://api.openweathermap.org/geo/1.0/direct?q=Golden,CO,USA&amp;appid={API_KEY}</c></p>
+  
+  <p><c>https://api.openweathermap.org/data/2.5/weather?lat=39.7546349&amp;lon=-105.22058&amp;units=imperial&amp;appid={API_KEY}</c></p>
+
+  <p>Note that for this API, you will have to generate an <term>API key</term>, which
+  is a random sequence of characters which is like a "password" for you to access the API.
+  As such, you will have to make an account with OpenWeatherMap (it's free), generate an API
+  key, and then use it in the code below.</p>
+
+  <p>Copy this code into your code editor and modify the <c>API_KEY</c> variable. Run the code.</p>
+  <pre>
+import requests
+
+API_KEY="TODO"
+
+# Get location data for Golden
+resp = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q=Golden,CO,USA&amp;appid={API_KEY}')
+resp = resp.json()
+print(resp)
+print()
+
+# Get the weather in Golden!
+resp2 = requests.get(f'https://api.openweathermap.org/data/2.5/weather?lat=39.7546349&amp;lon=-105.22058&amp;units=imperial&amp;appid={API_KEY}')
+resp2 = resp2.json()
+print(resp2)
+  </pre>
+
+  <p>In this code snippet, we can see the <c>requests</c> module (provided by Python by default)
+  is fairly straightforward: it defines a function <c>.get()</c> to send a GET request to the specified URL.
+  Then, we can simply call <c>.json()</c> on the response variable to get the response as JSON.</p>
+
+  <p>The data returned looks like:</p>
+  <pre>
+[{'name': 'Golden', 'local_names': {'en': 'Golden', 'ru': 'Голден'}, 'lat': 39.7546349, 'lon': -105.22058, 'country': 'US', 'state': 'Colorado'}]
+
+{'coord': {'lon': -105.2206, 'lat': 39.7546}, 'weather': [{'id': 800, 'main': 'Clear', 'description': 'clear sky', 'icon': '01d'}], 'base': 'stations', 'main': {'temp': 58.37, 'feels_like': 55.08, 'temp_min': 54.66, 'temp_max': 60.78, 'pressure': 1004, 'humidity': 25, 'sea_level': 1004, 'grnd_level': 794}, 'visibility': 10000, 'wind': {'speed': 18.41, 'deg': 250, 'gust': 28.77}, 'clouds': {'all': 0}, 'dt': 1738776783, 'sys': {'type': 2, 'id': 2007752, 'country': 'US', 'sunrise': 1738764281, 'sunset': 1738801510}, 'timezone': -25200, 'id': 5423294, 'name': 'Golden', 'cod': 200}
+  </pre>
+
+  <p>We can then use Python dictionary notation to get certain parts of the data out:</p>
+  <pre>
+print(resp[0]['name'] + ", " + resp[0]['state'] + ", " + resp[0]['country'])
+# Golden, Colorado, US
+
+print(resp2['weather']) # get the weather object
+# [{'id': 800, 'main': 'Clear', 'description': 'clear sky', 'icon': '01d'}]
+
+print(resp2['main']) # get the "main" object
+# {'temp': 57.45, 'feels_like': 54.07, 'temp_min': 53.87, 'temp_max': 58.66, 'pressure': 1004, 'humidity': 25, 'sea_level': 1004, 'grnd_level': 793}
+
+print(resp2['main']['temp']) # get the temperature from the main object
+# 57.45
+  </pre>
+  <p>It's always a good idea to print out <c>resp</c> first and then unpack it as needed;
+  for the first endpoint, it came back in list so we had to access the 1st element. On the
+  second one, we could grab the data directly.</p>
+</section>

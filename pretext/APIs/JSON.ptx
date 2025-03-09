@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<section xml:id="extratopics-json">
+  <title>JSON</title>
+
+  <p><term>JSON</term>, or JavaScript Object Notation, is a data format which
+  is used all over the web. Requests and responses (which we'll talk about next)
+  are sent with JSON.</p>
+
+  <p>In a nutshell, you have <term>keys</term> and <term>values</term>, just like in dictionaries.
+  Keys will be strings and values can be just about any type.</p>
+
+  <p>There's also the notion of an <term>object</term>, similar to how we know them in Python.
+  Objects "group" related data together. Objects are denoted with curly braces: <c>{}</c></p>
+
+  <p>Consider the following example:</p>
+  <pre>
+{
+  students: [
+    {
+      "name": "Student1",
+      "major": "Environmental Engineering"
+    },
+    {
+      "name": "Student2",
+      "major": "Mechanical Engineering",
+      "minor": "Computer Science"
+    }
+  ]
+}
+  </pre>
+
+  <p>Note that data is not always the same structure. The first student
+  did not have a <c>minor</c>, whereas the second student did. Normally
+  data should be uniform, but it may not always be when you're making 
+  different web requests.</p>
+
+  <p>That's just a brief introduction to JSON. Thankfully, Python
+  has an included <c>json</c> module since working with JSON is so common.
+  Knowing JSON helps us greatly as web requests and responses rely on it.</p>
+
+  <p>
+    For more details on Python json:
+    <url href="https://docs.python.org/3/library/json.html" visual="https://docs.python.org/3/library/json.html">https://docs.python.org/3/library/json.html</url>
+  </p>
+
+  <p>
+    For more details on JSON:
+    <url href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON" visual="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON">https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON</url>
+  </p>  
+</section>
