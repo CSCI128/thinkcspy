@@ -27,6 +27,7 @@
         <!--<xi:include href="./Exceptions/toctree.ptx"/>-->
         <xi:include href="./ClassesDiggingDeeper/toctree.ptx"/>
 		<xi:include href="./AdditionalTopics/toctree.ptx"/>
+        <xi:include href="./APIs/toctree.ptx"/>
         <!--<xi:include href="./Inheritance/toctree.ptx"/>-->
         <!--<xi:include href="./UnitTesting/toctree.ptx"/>-->
         <!--<xi:include href="./Dictionaries/toctree.ptx"/>-->

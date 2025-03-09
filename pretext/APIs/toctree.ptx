@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+4<title>Web Requests &amp; APIs</title>
+4<xi:include href="Introduction.ptx"/>
+4<xi:include href="JSON.ptx"/>
+4<xi:include href="Requests.ptx"/>
+4<xi:include href="Example.ptx"/>
+4<xi:include href="Conclusion.ptx"/>
+</chapter>
