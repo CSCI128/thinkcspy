@@ -1,0 +1,24 @@
+/* Book-wide custom CSS overrides, loaded via the html.css.extra
+   stringparam in the publication files. */
+
+/* Center the caption under the "Earth from Space" figure in the
+   Ethics, Bias, and Future of AI section. */
+#intro-ai-globe-west figcaption {
+    text-align: center;
+}
+
+/* Center the caption under the "Comparison of Machine Learning Types" */
+/* figure in the AI Toolbox / Core Subfields section.                 */
+#intro-ai-three-learning-types figcaption {
+    text-align: center;
+}
+
+/* Black-background static code listing for the scikit-learn decision  */
+/* tree example in How AI Thinks (not runnable in ActiveCode/CodeLens  */
+/* since it depends on an external library).                           */
+#intro-ai_traditional-vs-ml pre.program,
+#intro-ai_traditional-vs-ml pre.program code {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    text-shadow: none;
+}

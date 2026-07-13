@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+	<title>Artificial Intelligence</title>
+	<xi:include href="./WhatIsArtificialIntelligence.ptx"/>
+	<xi:include href="./HowAIThinks.ptx"/>
+	<xi:include href="./AIToolboxCoreSubfields.ptx"/>
+	<xi:include href="./AIApplications.ptx"/>
+	<xi:include href="./EthicsBiasAndFutureOfAI.ptx"/>
+	<xi:include href="./FutureOfAIAndHumanCollaboration.ptx"/>
+	<xi:include href="./Glossary.ptx"/>
+</chapter>

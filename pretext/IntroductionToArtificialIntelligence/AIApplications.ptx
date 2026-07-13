@@ -1,0 +1,592 @@
+<?xml version="1.0"?>
+<section xml:id="intro-ai_real-world">
+  <title>AI in the Real World</title>
+
+  <introduction>
+    <p>
+      AI is already embedded in daily life, shaping what we watch, read, buy, and how systems make
+      decisions in the background. This section explores practical applications of AI and connects
+      core concepts to the tools and platforms people use every day.
+    </p>
+  </introduction>
+
+  <subsection xml:id="intro-ai_everyday-algorithms">
+    <title>Everyday Algorithms</title>
+    <sidebyside widths="34% 62%">
+      <p>
+        <image source="IntroductiontoArtificialIntelligence/UmbrellaAI.png" width="100%" alt="AI umbrella diagram"/>
+      </p>
+      <p>
+        Now that we have explored how machine learning models learn and the tools they use to think,
+        let us investigate how these concepts manifest in the applications you interact with every
+        single day. AI is no longer confined to research labs; it operates quietly behind the scenes
+        of our favorite digital platforms and physical systems.
+      </p>
+    </sidebyside>
+
+    <p>
+      <term>Recommendation Engines</term>
+    </p>
+    <p>
+      Whenever you open an application like Netflix, YouTube, Spotify, or TikTok, you are
+      interacting with a highly optimized machine learning ecosystem known as a recommendation
+      engine. These systems solve a massive classification and ranking problem: out of millions
+      of available videos, songs, or posts, which five or ten items are you most likely to engage
+      with right now?
+    </p>
+    <p>
+      To achieve this, recommendation engines generally rely on two primary techniques:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>Collaborative Filtering:</alert> This method operates on the principle that if
+          two users share similar tastes in the past, they will likely share similar tastes in
+          the future. If the system observes that User A and User B both highly rated Sci-Fi
+          Movie X and Action Movie Y, and User A goes on to watch and love Indie Film Z, the
+          algorithm will predict that User B will enjoy Indie Film Z as well.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Content-Based Filtering:</alert> This technique focuses on the specific features
+          of the items themselves. If you frequently watch cooking tutorials that are tagged with
+          parameters like "baking," "pastry," or "10-minute recipes," the system builds a user
+          profile mapping your preferences to those exact data attributes, constantly serving you
+          content with matching metadata.
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      Modern platforms combine these approaches into hybrid systems. TikTok's algorithm, for
+      example, processes real-world user data down to the millisecond, tracking how long you
+      linger on a specific post, whether you rewatch it, and your explicit interaction history
+      (likes, comments, shares), to dynamically adjust your customized "For You" feed in real time.
+    </p>
+
+    <p>
+      <term>Questions for Everyday Algorithms</term>
+    </p>
+
+    <exercise label="ch2ai_sec4_q1">
+      <statement>
+        <p>
+          A music streaming platform notes that User X and User Y both love the same 5 indie rock
+          tracks. When User X likes a new synth-pop song, the platform immediately suggests it to
+          User Y. What recommendation strategy is being used?
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement><p>A. Content-Based Filtering</p></statement>
+          <feedback>
+            Incorrect. Content-based filtering focuses on item attributes, such as genre tags or
+            metadata, not shared behavior between similar users.
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>B. Collaborative Filtering</p></statement>
+          <feedback>
+            Correct. Collaborative filtering builds recommendation criteria on the premise that if
+            users shared similar tastes in the past, they will likely share them in the future.
+          </feedback>
+        </choice>
+        <choice>
+          <statement><p>C. Natural Language Processing</p></statement>
+          <feedback>
+            Incorrect. NLP is focused on machine interpretation of language, not user-to-user
+            preference matching.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="ch2ai_sec4_q2">
+      <statement>
+        <p>
+          True or False: TikTok's algorithm waits until a video completely finishes playing before
+          calculating metrics to update your "For You" feed.
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement><p>A. True</p></statement>
+          <feedback>
+            Incorrect. The system evaluates real-time markers continuously, including partial watch
+            behavior and short-duration interactions.
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>B. False</p></statement>
+          <feedback>
+            Correct. The system tracks loop rates, pauses, and lingering duration down to very short
+            time windows.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="intro-ai_nlp-and-cv-real-world">
+    <title>Natural Language Processing (NLP) &amp; Computer Vision</title>
+    <p>
+      These common filtering algorithms utilize many aspects of machine learning, deep neural
+      networks, and convolutional neural networks.
+    </p>
+    <p>
+      While basic machine learning works incredibly well with organized data spreadsheets, the
+      human world is full of unstructured information. Two of the most common and powerful
+      subfields within the AI toolbox focus on teaching computers to process human communication
+      and imagery.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>Natural Language Processing (NLP):</alert> This subfield focuses on how machines
+          read, decipher, synthesize, and understand human languages. Human text is notoriously
+          complex, filled with context, slang, sarcasm, and ambiguous grammar rules. NLP enables
+          applications like machine translation, automated sentiment analysis, and the foundational
+          architectures behind modern Large Language Models (LLMs).
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Computer Vision:</alert> This subfield gives machines the ability to "see" and
+          interpret visual inputs. To a computer, an image is a large grid of numerical pixel values.
+          Computer vision utilizes advanced deep learning networks to parse these pixel arrays,
+          enabling systems to identify objects, read traffic signs, track motion, and power
+          applications like facial recognition and autonomous driving vehicles.
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      <term>Questions for NLP and Computer Vision</term>
+    </p>
+
+    <exercise label="ch2ai_sec4_q3">
+      <statement>
+        <p>
+          Why is structural data parsing fundamentally different from tasks handled by Natural
+          Language Processing?
+        </p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              Structured spreadsheets are already organized neatly, whereas human language is
+              chaotic and full of unstructured slang, context, and ambiguous syntax rules.
+            </p>
+          </statement>
+          <feedback>
+            Correct. NLP exists specifically to interpret unstructured human communication and
+            context-heavy language.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              NLP only processes data fields stored as pixel blocks, whereas spreadsheets process
+              integers.
+            </p>
+          </statement>
+          <feedback>
+            Incorrect. Processing pixel blocks is associated with computer vision, not NLP.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              Spreadsheets require deep convolutional neural networks to run basic mathematical
+              functions.
+            </p>
+          </statement>
+          <feedback>
+            Incorrect. Basic spreadsheet operations do not require convolutional networks.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="ch2ai_sec4_q4">
+      <statement>
+        <p>
+          True or False: To a computer vision model, an image is perceived as an organic collection
+          of geometric vectors, shapes, and color pigments.
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement><p>A. True</p></statement>
+          <feedback>
+            Incorrect. That is a human interpretation. Models consume numerical pixel arrays.
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>B. False</p></statement>
+          <feedback>
+            Correct. To a computer, an image is fundamentally a multi-dimensional numerical matrix.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="intro-ai_generative-ai">
+    <title>Generative AI</title>
+    <p>
+      One of the most revolutionary shifts in modern software is Generative AI, which moves beyond
+      merely analyzing existing data to creating novel content, including human-like essays, computer
+      code, or realistic artwork. Popular tools like ChatGPT, Claude, and Midjourney are powered by
+      massive models trained on billions of human-created examples.
+    </p>
+
+    <p>
+      Prompt to model to output flow:
+    </p>
+    <p>
+      [ Prompt: "Cat in a spacesuit" ] -&gt; [ Generative AI Model (Calculates Probabilities) ] -&gt;
+      [ Output: High-fidelity image ]
+    </p>
+
+    <p>
+      Generative systems do not possess genuine human creativity, inspiration, or consciousness.
+      Instead, they operate on complex probabilistic patterns.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>Large Language Models (LLMs):</alert> A text generator like ChatGPT treats writing
+          as a sequential probability puzzle. Given a prompt, it calculates which token is most likely
+          to come next and repeats this process token by token.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Diffusion Models:</alert> Image generators like Midjourney or Stable Diffusion learn
+          from image-text pairs. During training, images are noised and then denoised. At generation
+          time, the model starts from random noise and progressively denoises toward an image aligned
+          to the prompt.
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      <term>Why Probabilistic Systems Can Be Wrong</term>
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>Hallucinations (Confabulations):</alert> Factually incorrect statements, fabricated
+          references, or invented data presented confidently.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Context Drifts:</alert> In long conversations, the model may overweight recent text
+          and contradict earlier constraints.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Data Echoes (Stochastic Parrots):</alert> If misconceptions or outdated beliefs are
+          common in training data, models may reproduce them.
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      <term>Statistics and References on LLM Factual Accuracy</term>
+    </p>
+    <p>
+      Measuring the exact accuracy of an LLM is a moving target because models are updated
+      constantly. However, independent benchmark registries and peer-reviewed studies offer
+      clear empirical data regarding how often these probabilistic patterns fail.
+    </p>
+
+    <ol marker="1">
+      <li>
+        <p>
+          <alert>Hallucination Rates Across Leading Models</alert>
+        </p>
+        <p>
+          The Vectara Hallucination Leaderboard, an industry-standard benchmark that continuously
+          audits LLMs by prompting them to summarize text and tracking how often they invent data
+          not found in source material, highlights regular failure rates:
+        </p>
+        <p>
+          <url href="https://www.vectara.com/blog/introducing-the-next-generation-of-vectaras-hallucination-leaderboard" visual="https://www.vectara.com/blog/introducing-the-next-generation-of-vectaras-hallucination-leaderboard">https://www.vectara.com/blog/introducing-the-next-generation-of-vectaras-hallucination-leaderboard</url>
+        </p>
+        <ul>
+          <li>
+            <p>
+              GPT-4o (OpenAI): Generally ranks as one of the most reliable models, but still
+              maintains an audited hallucination rate of approximately 5.6% depending on prompt
+              complexity.
+            </p>
+          </li>
+          <li>
+            <p>
+              Claude 3.5 Sonnet (Anthropic): Displays a hallucination rate fluctuating around 10%.
+            </p>
+          </li>
+          <li>
+            <p>
+              Llama 3 (Meta) / Mixtral (Mistral): Open-source models typically demonstrate
+              hallucination rates near 4.5%.
+            </p>
+          </li>
+        </ul>
+        <p>
+          What this means mathematically: Even with the world's best engineering, a 2% hallucination
+          rate means that out of every 100 paragraphs generated, two are statistically likely to
+          contain fabricated facts or relationships.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Domain-Specific Inaccuracy (The Legal Domain)</alert>
+        </p>
+        <p>
+          When applied to highly technical fields, accuracy rates can drop significantly. A landmark
+          2024 study by Stanford University's RegLab evaluated leading LLMs on legal reasoning and
+          case law citations.
+        </p>
+        <p>
+          <em>Magesh, V., Surani, F., Dahl, M., Suzgun, M., Manning, C. D., &amp; Ho, D. E. (2025).
+          Hallucination-free? Assessing the reliability of leading AI legal research tools.</em>
+          <em>Journal of Empirical Legal Studies</em>, 22(2), 216-242.
+        </p>
+        <p>
+          The researchers found widespread inaccuracies:
+        </p>
+        <ul>
+          <li>
+            <p>
+              Models hallucinated or misstated legal facts between 6% and 75% of the time for
+              specific, nuanced case-precedent queries.
+            </p>
+          </li>
+          <li>
+            <p>
+              Even when explicit legal documents were provided in prompts, models still introduced
+              hallucinated elements in more than 15% of legal summaries.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <alert>General Knowledge Tracking (The MMLU Benchmark)</alert>
+        </p>
+        <p>
+          The standard benchmark used to measure factual knowledge across 57 subjects is the
+          Massive Multitask Language Understanding (MMLU) index.
+        </p>
+        <p>
+          <url href="https://crfm.stanford.edu/helm/mmlu/latest/" visual="https://crfm.stanford.edu/helm/mmlu/latest/">https://crfm.stanford.edu/helm/mmlu/latest/</url>
+        </p>
+        <ul>
+          <li>
+            <p>
+              The highest-performing models score roughly 88% to 90% on MMLU.
+            </p>
+          </li>
+          <li>
+            <p>
+              A 90% score still mathematically confirms incorrect output on approximately 10% of
+              benchmarked academic and factual items.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <p>
+      <term>The Strategic Lesson for Humans</term>
+    </p>
+    <p>
+      These statistics underscore why treating an LLM like an omniscient search engine is a major
+      mistake. Because their core architecture is based on calculating the mathematical probability
+      of words rather than verifying external reality, they require constant human evaluation.
+    </p>
+    <p>
+      Strategic users do not offload critical thinking to LLMs. Instead, they write precise
+      specifications, treat model output as a rough draft, and use Socratic dialogue to audit the
+      AI's logic, cross-checking critical statistics against verified, primary human sources.
+    </p>
+
+    <p>
+      <term>Questions for Generative AI</term>
+    </p>
+
+    <exercise label="ch2ai_sec4_q5">
+      <statement>
+        <p>
+          An image-generating system starts with random digital static and progressively cleans it
+          to match a textual prompt. This process is known as:
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement><p>Sequential Probability Selection</p></statement>
+          <feedback>
+            Incorrect. Sequential next-token selection is associated with text generation in LLMs.
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>Denoising via a Diffusion Model</p></statement>
+          <feedback>
+            Correct. Diffusion models reverse noise to produce prompt-aligned images.
+          </feedback>
+        </choice>
+        <choice>
+          <statement><p>Context Drift Mitigation</p></statement>
+          <feedback>
+            Incorrect. Context drift is a failure mode, not an image generation mechanism.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="ch2ai_sec4_q6">
+      <statement>
+        <p>
+          Which option correctly pairs common generative AI failure types with their descriptions?
+        </p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              Hallucination: fabricating facts confidently; Context Drift: forgetting original
+              prompt goals in long contexts; Data Echo: replicating flaws in training data.
+            </p>
+          </statement>
+          <feedback>
+            Correct. These are core failure modes of probabilistic generative systems.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              Hallucination: forgetting words; Context Drift: inventing sources;
+              Data Echo: explicit hardware runtime error.
+            </p>
+          </statement>
+          <feedback>
+            Incorrect. This set mixes unrelated definitions and omits the actual data-echo behavior.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="ch2ai_sec4_q7">
+      <statement>
+        <p>
+          True or False: If a model scores 90% on MMLU, it is incapable of generating false data
+          on those subjects.
+        </p>
+      </statement>
+      <choices>
+        <choice>
+          <statement><p>True</p></statement>
+          <feedback>
+            Incorrect. A 90% score still implies nontrivial error on benchmark items.
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement><p>False</p></statement>
+          <feedback>
+            Correct. A 90% benchmark score means the system still misses approximately 10%.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+
+  <subsection xml:id="intro-ai_autonomous-systems">
+    <title>Autonomous Systems</title>
+    <p>
+      The transition of AI from digital text and screens into physical reality is exemplified by
+      autonomous systems such as industrial robotics, delivery drones, and self-driving vehicles.
+      An autonomous system continuously executes a closed loop of Sensing, Planning, and Acting.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>Sensing:</alert> Hardware sensors such as cameras, LiDAR, radar, and ultrasonic
+          sensors capture environmental data. Computer vision models process these streams in real
+          time to detect lanes, signs, pedestrians, and nearby vehicles.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Planning:</alert> The onboard system predicts trajectories of surrounding objects,
+          evaluates safe motion paths, and applies traffic constraints.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Acting:</alert> The system sends control commands to steering, braking, and
+          acceleration components. This loop repeats many times per second.
+        </p>
+      </li>
+    </ul>
+
+    <exercise label="ch2ai_sec4_q8">
+      <statement>
+        <p>
+          <alert>Interactive Element (Multiple-Choice Question): Identifying Real-World AI</alert>
+        </p>
+        <p>
+          Which mapping correctly matches each application to its primary AI category?
+        </p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>
+              Self-driving car braking for a dog -&gt; Autonomous System; Spotify weekly playlist -&gt; Recommendation Engine; GitHub Copilot generating Python from comments -&gt; Generative AI (LLM); Midjourney text-to-image castle -&gt; Generative AI (Diffusion)
+            </p>
+          </statement>
+          <feedback>
+            Correct. Each mapping aligns with the sensing/planning/acting loop, collaborative recommendation, text generation, and diffusion image generation respectively.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              Self-driving car braking for a dog -&gt; Recommendation Engine; Spotify weekly playlist -&gt; Autonomous System; GitHub Copilot generating Python from comments -&gt; Generative AI (Diffusion); Midjourney text-to-image castle -&gt; Generative AI (LLM)
+            </p>
+          </statement>
+          <feedback>
+            Incorrect. This swaps core categories and mixes up LLM and diffusion model roles.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              Self-driving car braking for a dog -&gt; Generative AI (LLM); Spotify weekly playlist -&gt; Recommendation Engine; GitHub Copilot generating Python from comments -&gt; Autonomous System; Midjourney text-to-image castle -&gt; Generative AI (Diffusion)
+            </p>
+          </statement>
+          <feedback>
+            Incorrect. Self-driving control is not an LLM task, and Copilot is not an autonomous robotics loop.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>
+              Self-driving car braking for a dog -&gt; Autonomous System; Spotify weekly playlist -&gt; Generative AI (LLM); GitHub Copilot generating Python from comments -&gt; Recommendation Engine; Midjourney text-to-image castle -&gt; Generative AI (Diffusion)
+            </p>
+          </statement>
+          <feedback>
+            Incorrect. Spotify is mainly recommendation, and Copilot is generative text/code modeling rather than recommendation.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

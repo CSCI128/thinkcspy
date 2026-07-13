@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<section xml:id="intro-ai_ethics-bias-future">
+  <title>Ethics, Bias, and the Future of AI</title>
+
+  <introduction>
+    <p>
+      AI systems influence real people and real communities, so technical performance alone is not
+      enough. This section introduces the ethical risks of bias and opacity, along with the growing
+      environmental costs of large-scale AI infrastructure.
+    </p>
+  </introduction>
+
+  <subsection xml:id="intro-ai_black-box-and-bias">
+    <title>The Black Box Problem and Algorithmic Bias</title>
+    <p>
+      As AI transitions from a theoretical computer science discipline into part of society's
+      infrastructure, we must look beyond optimization and confront a critical reality:
+      <alert>AI is a reflection of human choices.</alert>
+    </p>
+    <p>
+      One of the most immediate technical and ethical challenges in modern AI is the
+      <term>Black Box Problem</term>. While traditional programs follow clear, human-readable
+      logic blocks, a deep learning network might alter millions of internal numerical parameters
+      to reach a decision.
+    </p>
+    <p>
+      If an autonomous system or automated screening tool denies a bank loan or rejects a job
+      applicant, it can be mathematically difficult for engineers to explain exactly why the model
+      reached that conclusion. This lack of transparency becomes dangerous when systems amplify
+      systemic prejudices, a phenomenon known as <term>algorithmic bias</term>. Because machine
+      learning models derive internal rules from historical human data, they can inherit, automate,
+      and scale societal bias.
+    </p>
+
+    <p>
+      <term>Real-World Case Study: Automated Hiring Bias</term>
+    </p>
+    <p>
+      Consider a large corporation using a supervised model to screen resumes. Engineers train the
+      model on historical submissions from the last 10 years, with labels indicating who was hired
+      and promoted.
+    </p>
+    <p>
+      If engineering and leadership roles were historically male-dominated due to systemic factors,
+      the dataset may contain more male profiles marked with positive outcomes. The model, lacking
+      social context, searches for correlations only. It may overvalue phrasing patterns or activities
+      that correlate with past hiring labels and underweight equally strong candidates whose resumes
+      use different language or affiliations.
+    </p>
+    <p>
+      In 2014, Amazon deployed such a system, that acted as an automated mirror of past hiring patterns rather than
+      a fair evaluator of potential. As a result of this kind of bias risk, Amazon discontinued use
+      of the internal AI hiring tool in early 2017. All code written by humans can encode human bias.
+    </p>
+  </subsection>
+
+  <subsection xml:id="intro-ai_environmental-cost">
+    <title>The Environmental Cost of AI: Energy and Water Footprints</title>
+    <p>
+      While social impacts of bias are widely discussed, the physical infrastructure supporting AI
+      introduces an escalating environmental footprint. Training and running modern generative models
+      requires large-scale computation that consumes significant resources.
+    </p>
+
+  <figure align="center" xml:id="intro-ai-globe-west">
+    <caption>NASA: The Earth from Space</caption>
+    <image source="IntroductiontoArtificialIntelligence/globe_west.jpg" width="75%" alt="Diagram of three machine learning types"/>
+  </figure>
+
+    <p>
+      <term>Electricity Consumption</term>
+    </p>
+    <p>
+      According to the International Energy Agency (IEA), global data center electricity use was
+      approximately 460 TWh in 2022. Driven by AI inference and large-model training, projected
+      use ranges from 650 TWh to 1,050 TWh, approximately doubling the baseline. Source: https://www.iea.org/reports/energy-and-ai/energy-supply-for-ai
+    </p>
+    <p>
+      If global data centers were a standalone country, projected demand would place them among the
+      largest electricity consumers in the world.
+    </p>
+    <p>
+      A traditional web search is often around 0.3 Wh. A single generative AI query can be around
+      0.3 to 0.34 kWh, roughly a 1000x increase in energy per query.
+    </p>
+    <p>
+      In the United States, which represents a major share of the global data center market, data
+      centers consumed about 4.4% of total electricity in 2023 and are projected to rise as AI
+      infrastructure scales.
+    </p>
+
+    <p>
+      <term>Water Consumption</term>
+    </p>
+    <p>
+      AI hardware runs hot and requires active cooling. Data center cooling is a major operating cost
+      and often depends on large evaporative cooling systems.
+    </p>
+    <p>
+      United Nations University reporting highlights rapid growth in cooling-water withdrawals for
+      next-generation server clusters. In the United States alone, facilities have consumed billions
+      of gallons annually for cooling. Global AI-related water demand is projected in the billions of
+      cubic meters per year. Source: https://unu.edu/inweh/news/environmental-cost-of-AIs-Enrgy-use-carbon-water-and-land-footprints
+    </p>
+    <p>
+      Solving these overlapping challenges, social equity in algorithm behavior and physical resource
+      efficiency in infrastructure, is a core task for the next generation of computer scientists.
+    </p>
+
+    <exercise label="ch2ai_sec5_q1" indent="show">
+      <statement>
+        <p>
+          <alert>Interactive Element (Parson's Problem): The Resource Dilemma</alert>
+        </p>
+        <p>
+          Context: A tech company proposes multiple operating setups for a new multi-megawatt AI
+          data center in a semi-arid region.
+        </p>
+        <p>
+          Drag the blocks below into order from <alert>Lowest Environmental Impact</alert> to
+          <alert>Highest Environmental Impact</alert> based on combined water and energy strain.
+        </p>
+      </statement>
+      <blocks>
+        <block>
+          <cline>Recycled Water + Renewable Energy Co-location</cline>
+        </block>
+        <block>
+          <cline>Air-Cooled (Waterless) + Fossil-Fuel Grid Power</cline>
+        </block>
+        <block>
+          <cline>Direct Aquifer Cooling + Mixed Grid Power</cline>
+        </block>
+        <block>
+          <cline>Direct Aquifer Cooling + Dedicated Fossil-Fuel Peaker Plant</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+</section>

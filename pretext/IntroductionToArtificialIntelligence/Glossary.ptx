@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<section xml:id="intro-ai_glossary">
+	<title>Glossary</title>
+	<glossary sorted="False">
+		<gi>
+			<title>algorithmic bias</title>
+			<p>A systematic and repeatable error in a computer system that creates unfair outcomes, typically caused by human prejudices embedded in the historical training data.</p>
+		</gi>
+		<gi>
+			<title>artificial general intelligence (agi)</title>
+			<p>A theoretical form of AI that possesses human-level adaptability, reasoning, and the ability to apply intelligence to any intellectual task rather than a single specific problem.</p>
+		</gi>
+		<gi>
+			<title>artificial narrow intelligence (ani)</title>
+			<p>Also known as Weak AI. AI systems designed, trained, and optimized to handle a single, highly specific task, such as playing chess, translating text, or recommending videos.</p>
+		</gi>
+		<gi>
+			<title>classification</title>
+			<p>A supervised learning task where the model is trained to sort data inputs into distinct, predefined categories or labels (e.g., identifying a fruit as either an apple or an orange).</p>
+		</gi>
+		<gi>
+			<title>features</title>
+			<p>The individual, measurable properties, inputs, or characteristics of a dataset used by a machine learning model to find patterns and make predictions.</p>
+		</gi>
+		<gi>
+			<title>labels</title>
+			<p>The target outcomes, answers, or ground-truth classifications attached to a dataset in supervised learning that the model attempts to predict.</p>
+		</gi>
+		<gi>
+			<title>machine learning (ml)</title>
+			<p>A subfield of artificial intelligence focused on building systems that learn rules and patterns directly from data, shifting the programming paradigm from "Data + Rules = Answers" to "Data + Answers = Rules."</p>
+		</gi>
+		<gi>
+			<title>overfitting</title>
+			<p>A modeling error that occurs when a machine learning algorithm memorizes the specific details and noise of its training data too perfectly. This results in high training accuracy but poor performance on new, unseen data.</p>
+		</gi>
+		<gi>
+			<title>supervised learning</title>
+			<p>A type of machine learning where the algorithm is trained on a labeled dataset, meaning every input example is paired with its correct output answer.</p>
+		</gi>
+		<gi>
+			<title>testing set</title>
+			<p>A separate partition of data withheld during the training phase, used exclusively to evaluate how well a machine learning model generalizes to new, unseen data.</p>
+		</gi>
+		<gi>
+			<title>training set</title>
+			<p>The primary portion of a dataset provided to a machine learning model during the learning phase, allowing the algorithm to adjust its internal parameters and discover underlying patterns.</p>
+		</gi>
+		<gi>
+			<title>unsupervised learning</title>
+			<p>A type of machine learning where the algorithm processes unlabeled data, attempting to discover hidden structures, groupings, or clusters entirely on its own.</p>
+		</gi>
+	</glossary>
+</section>
