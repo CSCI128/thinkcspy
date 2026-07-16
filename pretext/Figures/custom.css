@@ -22,3 +22,21 @@
     color: #d4d4d4;
     text-shadow: none;
 }
+
+/* Bold the "1." numbers in the "Pro Tips for Undergraduate Success" list */
+/* in the Future of AI and Human Collaboration section.                  */
+#intro-ai-socratic-dialogues ol.decimal > li::marker {
+    font-weight: bold;
+}
+
+/* Center the caption under the "Input, Layered Processing, Output" */
+/* figure in the AI Applications section.                           */
+#intro-ai-catSpaceuit figcaption {
+    text-align: center;
+}
+
+/* Bold the "1." numbers in the Hallucination Rates list in the */
+/* Generative AI (2.4.3) subsection.                             */
+#intro-ai_generative-ai ol.decimal > li::marker {
+    font-weight: bold;
+}

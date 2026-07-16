@@ -12,7 +12,7 @@
 
   <subsection xml:id="intro-ai_everyday-algorithms">
     <title>Everyday Algorithms</title>
-    <sidebyside widths="34% 62%">
+    <sidebyside widths="48% 48%">
       <p>
         <image source="IntroductiontoArtificialIntelligence/UmbrellaAI.png" width="100%" alt="AI umbrella diagram"/>
       </p>
@@ -79,21 +79,21 @@
       </statement>
       <choices>
         <choice>
-          <statement><p>A. Content-Based Filtering</p></statement>
+          <statement><p>Content-Based Filtering</p></statement>
           <feedback>
             Incorrect. Content-based filtering focuses on item attributes, such as genre tags or
             metadata, not shared behavior between similar users.
           </feedback>
         </choice>
         <choice correct="yes">
-          <statement><p>B. Collaborative Filtering</p></statement>
+          <statement><p>Collaborative Filtering</p></statement>
           <feedback>
             Correct. Collaborative filtering builds recommendation criteria on the premise that if
             users shared similar tastes in the past, they will likely share them in the future.
           </feedback>
         </choice>
         <choice>
-          <statement><p>C. Natural Language Processing</p></statement>
+          <statement><p>Natural Language Processing</p></statement>
           <feedback>
             Incorrect. NLP is focused on machine interpretation of language, not user-to-user
             preference matching.
@@ -111,14 +111,14 @@
       </statement>
       <choices>
         <choice>
-          <statement><p>A. True</p></statement>
+          <statement><p>True</p></statement>
           <feedback>
             Incorrect. The system evaluates real-time markers continuously, including partial watch
             behavior and short-duration interactions.
           </feedback>
         </choice>
         <choice correct="yes">
-          <statement><p>B. False</p></statement>
+          <statement><p>False</p></statement>
           <feedback>
             Correct. The system tracks loop rates, pauses, and lingering duration down to very short
             time windows.
@@ -219,13 +219,13 @@
       </statement>
       <choices>
         <choice>
-          <statement><p>A. True</p></statement>
+          <statement><p>True</p></statement>
           <feedback>
             Incorrect. That is a human interpretation. Models consume numerical pixel arrays.
           </feedback>
         </choice>
         <choice correct="yes">
-          <statement><p>B. False</p></statement>
+          <statement><p>False</p></statement>
           <feedback>
             Correct. To a computer, an image is fundamentally a multi-dimensional numerical matrix.
           </feedback>
@@ -243,13 +243,10 @@
       massive models trained on billions of human-created examples.
     </p>
 
-    <p>
-      Prompt to model to output flow:
-    </p>
-    <p>
-      [ Prompt: "Cat in a spacesuit" ] -&gt; [ Generative AI Model (Calculates Probabilities) ] -&gt;
-      [ Output: High-fidelity image ]
-    </p>
+  <figure align="center" xml:id="intro-ai-catSpaceuit">
+    <caption>Input, Layered Processing, Output</caption>
+    <image source="IntroductiontoArtificialIntelligence/catSpacesuit.png" width="75%" alt="Diagram of three machine learning types"/>
+  </figure>
 
     <p>
       Generative systems do not possess genuine human creativity, inspiration, or consciousness.
@@ -306,7 +303,7 @@
       clear empirical data regarding how often these probabilistic patterns fail.
     </p>
 
-    <ol marker="1">
+    <ol marker="1.">
       <li>
         <p>
           <alert>Hallucination Rates Across Leading Models</alert>

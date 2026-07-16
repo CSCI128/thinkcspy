@@ -148,7 +148,7 @@
     <p>
       For instance, you can instruct an AI model to:
     </p>
-    <ol marker="1">
+    <ul>
       <li>
         <p>
           Act as a critical reviewer or devil's advocate for an essay, software architecture, or
@@ -167,7 +167,7 @@
           historical data points.
         </p>
       </li>
-    </ol>
+    </ul>
     <p>
       In this mode of interaction, the AI does not do the thinking for you. Instead, it acts as an
       objective mirror that forces you to deepen your own understanding, uncover your hidden
@@ -194,7 +194,7 @@
       can serve as a powerful cognitive scaffolding tool.
     </p>
 
-    <ol marker="1">
+    <ol marker="1.">
       <li>
         <p>
           <alert>Engage in Socratic Dialogues (The Interactive Sparring Partner)</alert>
@@ -268,13 +268,13 @@
     </p>
     <ul>
       <li>
-        <p>Asking the AI to generate a full essay or code block from scratch.</p>
+        <p>Do not ask the AI to generate a full essay or code block from scratch.</p>
       </li>
       <li>
-        <p>Copying and pasting answers without validating them.</p>
+        <p>Do not copy and paste answers without validating them.</p>
       </li>
       <li>
-        <p>Using AI to completely eliminate the struggle of learning.</p>
+        <p>Do not use AI to completely eliminate the struggle of learning.</p>
       </li>
     </ul>
 
