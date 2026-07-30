@@ -11,12 +11,12 @@
   
   <program xml:id="ch7_sec4_p1" interactive="activecode" language="python">
     <input>
-i = 0
+i = -1
 while i &lt; 10:
+  i += 1
   if i == 5:
     break
   print(i)
-  i += 1
 </input>
   </program>
 
@@ -26,12 +26,12 @@ while i &lt; 10:
 
   <program xml:id="ch7_sec4_p2" interactive="activecode" language="python">
     <input>
-i = 0
+i = -1
 while i &lt; 10:
+  i += 1
   if i == 5:
     continue
   print(i)
-  i += 1
 </input>
   </program>
 
