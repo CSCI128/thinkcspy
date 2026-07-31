@@ -23,6 +23,18 @@
     text-shadow: none;
 }
 
+/* Prism's default theme gives operator/entity tokens (e.g. "=") a          */
+/* translucent white background box meant for light pages. Against our     */
+/* dark code background that washes out their already-dim text color,      */
+/* making punctuation like "=" unreadable. Strip the background and use    */
+/* the same light foreground color as the rest of the listing.             */
+#intro-ai_traditional-vs-ml pre.program .token.operator,
+#intro-ai_traditional-vs-ml pre.program .token.entity,
+#intro-ai_traditional-vs-ml pre.program .token.url {
+    background: none;
+    color: #d4d4d4;
+}
+
 /* Bold the "1." numbers in the "Pro Tips for Undergraduate Success" list */
 /* in the Future of AI and Human Collaboration section.                  */
 #intro-ai-socratic-dialogues ol.decimal > li::marker {

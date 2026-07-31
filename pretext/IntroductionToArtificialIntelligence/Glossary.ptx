@@ -3,6 +3,10 @@
 	<title>Glossary</title>
 	<glossary sorted="False">
 		<gi>
+			<title>ai triad</title>
+			<p>The three converging components&#8212;data, algorithms, and compute&#8212;whose simultaneous availability is credited with driving the modern boom in artificial intelligence.</p>
+		</gi>
+		<gi>
 			<title>algorithmic bias</title>
 			<p>A systematic and repeatable error in a computer system that creates unfair outcomes, typically caused by human prejudices embedded in the historical training data.</p>
 		</gi>
@@ -15,24 +19,96 @@
 			<p>Also known as Weak AI. AI systems designed, trained, and optimized to handle a single, highly specific task, such as playing chess, translating text, or recommending videos.</p>
 		</gi>
 		<gi>
+			<title>autonomous system</title>
+			<p>A physical or software system, such as a self-driving car or delivery drone, that continuously executes a closed loop of sensing, planning, and acting without direct human control.</p>
+		</gi>
+		<gi>
+			<title>black box problem</title>
+			<p>The difficulty of explaining exactly why a deep learning model reached a particular decision, since it may adjust millions of internal numerical parameters rather than follow clear, human-readable logic.</p>
+		</gi>
+		<gi>
 			<title>classification</title>
 			<p>A supervised learning task where the model is trained to sort data inputs into distinct, predefined categories or labels (e.g., identifying a fruit as either an apple or an orange).</p>
+		</gi>
+		<gi>
+			<title>cognitive offloading</title>
+			<p>The practice of relying on an AI tool to perform the foundational mechanics of a task, which can lead to skill atrophy if it replaces the mental struggle needed to build genuine understanding.</p>
+		</gi>
+		<gi>
+			<title>collaborative filtering</title>
+			<p>A recommendation technique that predicts a user's preferences based on the shared tastes of other users with similar historical behavior.</p>
+		</gi>
+		<gi>
+			<title>computer vision</title>
+			<p>A subfield of AI that gives machines the ability to interpret visual inputs by parsing images as grids of numerical pixel values, enabling tasks like object detection and facial recognition.</p>
+		</gi>
+		<gi>
+			<title>content-based filtering</title>
+			<p>A recommendation technique that suggests items based on the measurable features of items a user has previously engaged with, rather than the behavior of other users.</p>
+		</gi>
+		<gi>
+			<title>data echo (stochastic parrot)</title>
+			<p>A failure mode in which a generative model reproduces misconceptions, biases, or outdated beliefs that were common in its training data.</p>
+		</gi>
+		<gi>
+			<title>deep learning</title>
+			<p>A specialized branch of machine learning that uses multi-layer neural networks to learn complex patterns directly from large, raw datasets such as text, audio, or images.</p>
+		</gi>
+		<gi>
+			<title>diffusion model</title>
+			<p>A generative model that learns to create images by reversing a noising process, starting from random noise and progressively denoising it into an output aligned with a prompt.</p>
 		</gi>
 		<gi>
 			<title>features</title>
 			<p>The individual, measurable properties, inputs, or characteristics of a dataset used by a machine learning model to find patterns and make predictions.</p>
 		</gi>
 		<gi>
+			<title>generative ai</title>
+			<p>A category of AI systems that creates novel content, such as text, code, or images, by learning probabilistic patterns from massive datasets of human-created examples.</p>
+		</gi>
+		<gi>
+			<title>hallucination (confabulation)</title>
+			<p>A factually incorrect statement, fabricated reference, or invented data point produced confidently by a generative AI model.</p>
+		</gi>
+		<gi>
 			<title>labels</title>
 			<p>The target outcomes, answers, or ground-truth classifications attached to a dataset in supervised learning that the model attempts to predict.</p>
+		</gi>
+		<gi>
+			<title>large language model (llm)</title>
+			<p>A generative AI system, such as ChatGPT, that produces text by repeatedly calculating and selecting the most probable next token given a prompt.</p>
 		</gi>
 		<gi>
 			<title>machine learning (ml)</title>
 			<p>A subfield of artificial intelligence focused on building systems that learn rules and patterns directly from data, shifting the programming paradigm from "Data + Rules = Answers" to "Data + Answers = Rules."</p>
 		</gi>
 		<gi>
+			<title>natural language processing (nlp)</title>
+			<p>A subfield of AI focused on how machines read, decipher, synthesize, and understand human languages, enabling applications like translation and sentiment analysis.</p>
+		</gi>
+		<gi>
+			<title>neural network</title>
+			<p>A layered computational structure, loosely inspired by the brain, in which early layers detect simple features and deeper layers combine them into higher-level concepts during training.</p>
+		</gi>
+		<gi>
 			<title>overfitting</title>
 			<p>A modeling error that occurs when a machine learning algorithm memorizes the specific details and noise of its training data too perfectly. This results in high training accuracy but poor performance on new, unseen data.</p>
+		</gi>
+		<gi>
+			<title>recommendation engine</title>
+			<p>A machine learning system, used by platforms like Netflix or Spotify, that ranks and predicts which items out of a large catalog a user is most likely to engage with.</p>
+		</gi>
+		<gi>
+			<title>reinforcement learning</title>
+			<p>A type of machine learning in which an agent interacts with an environment and learns a strategy to maximize cumulative reward through trial and error, rather than from labeled data.</p>
+		</gi>
+		<gi>
+			<title>socratic dialogue</title>
+			<p>A strategy for using AI as an interactive sparring partner&#8212;posing challenging questions or counterarguments&#8212;rather than as a source of immediate answers, in order to deepen human understanding.</p>
+		</gi>
+		<gi>
+			<title>specification-driven interaction</title>
+			<p>An approach to using AI in which a human explicitly defines the architectural boundaries, constraints, and requirements of a problem before directing the AI to fill in implementation details.</p>
 		</gi>
 		<gi>
 			<title>supervised learning</title>
@@ -45,6 +121,10 @@
 		<gi>
 			<title>training set</title>
 			<p>The primary portion of a dataset provided to a machine learning model during the learning phase, allowing the algorithm to adjust its internal parameters and discover underlying patterns.</p>
+		</gi>
+		<gi>
+			<title>turing test</title>
+			<p>A thought experiment proposed by Alan Turing in which a machine demonstrates intelligent behavior if a human judge cannot reliably distinguish it from a real human during a free-flowing conversation.</p>
 		</gi>
 		<gi>
 			<title>unsupervised learning</title>

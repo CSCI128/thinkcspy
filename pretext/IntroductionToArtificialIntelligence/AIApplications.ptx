@@ -131,35 +131,13 @@
   <subsection xml:id="intro-ai_nlp-and-cv-real-world">
     <title>Natural Language Processing (NLP) &amp; Computer Vision</title>
     <p>
-      These common filtering algorithms utilize many aspects of machine learning, deep neural
-      networks, and convolutional neural networks.
+      Recommendation and filtering algorithms lean heavily on two subfields introduced in
+      <xref ref="intro-ai-toolbox_nlp-and-computer-vision"/>: <alert>Natural Language Processing
+      (NLP)</alert>, which lets machines read and understand human language, and
+      <alert>Computer Vision</alert>, which lets machines "see" by parsing images as grids of
+      numerical pixel values. Together, these two subfields let AI systems handle the unstructured
+      text and imagery that make up much of the real world.
     </p>
-    <p>
-      While basic machine learning works incredibly well with organized data spreadsheets, the
-      human world is full of unstructured information. Two of the most common and powerful
-      subfields within the AI toolbox focus on teaching computers to process human communication
-      and imagery.
-    </p>
-    <ul>
-      <li>
-        <p>
-          <alert>Natural Language Processing (NLP):</alert> This subfield focuses on how machines
-          read, decipher, synthesize, and understand human languages. Human text is notoriously
-          complex, filled with context, slang, sarcasm, and ambiguous grammar rules. NLP enables
-          applications like machine translation, automated sentiment analysis, and the foundational
-          architectures behind modern Large Language Models (LLMs).
-        </p>
-      </li>
-      <li>
-        <p>
-          <alert>Computer Vision:</alert> This subfield gives machines the ability to "see" and
-          interpret visual inputs. To a computer, an image is a large grid of numerical pixel values.
-          Computer vision utilizes advanced deep learning networks to parse these pixel arrays,
-          enabling systems to identify objects, read traffic signs, track motion, and power
-          applications like facial recognition and autonomous driving vehicles.
-        </p>
-      </li>
-    </ul>
 
     <p>
       <term>Questions for NLP and Computer Vision</term>

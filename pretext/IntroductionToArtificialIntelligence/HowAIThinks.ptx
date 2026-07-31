@@ -93,14 +93,6 @@ print(classify_fruit_by_rules(170, 2))
     </p>
 
     <p>
-      Each time we train an algorithm, we must divide our historical data into separate pools:
-      a training set to let the model build its internal rules, and a testing set to evaluate
-      whether it can handle new, unseen situations. If a model scores perfectly on its training
-      data but fails on its testing data, we know it has overfitted, meaning it simply memorized
-      the past instead of learning generalized rules.
-    </p>
-
-    <p>
       Here is an example of a classification ML algorithm from the <c>scikit-learn</c> library
       that predicts whether a fruit is an Apple or an Orange.
     </p>
