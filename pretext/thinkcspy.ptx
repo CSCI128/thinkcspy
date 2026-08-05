@@ -12,8 +12,8 @@
         <xi:include href="./FrontBackMatter/prefaceinteractive.ptx"/>
         </frontmatter>
         <xi:include href="./GeneralIntro/toctree.ptx"/>
-        <xi:include href="./IntroductionToArtificialIntelligence/toctree.ptx"/>
         <xi:include href="./SimplePythonData/toctree.ptx"/>
+        <xi:include href="./IntroductionToArtificialIntelligence/toctree.ptx"/>
         <xi:include href="./Strings/toctree.ptx"/>
         <xi:include href="./Lists/toctree.ptx"/>
         <xi:include href="./Selection/toctree.ptx"/>
