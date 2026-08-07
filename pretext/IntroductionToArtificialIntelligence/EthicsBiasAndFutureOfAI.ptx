@@ -73,7 +73,11 @@
     <p>
       According to the International Energy Agency (IEA), global data center electricity use was
       approximately 460 TWh in 2022. Driven by AI inference and large-model training, projected
-      use ranges from 650 TWh to 1,050 TWh, approximately doubling the baseline. Source: https://www.iea.org/reports/energy-and-ai/energy-supply-for-ai
+      use ranges from 650 TWh to 1,050 TWh, approximately doubling the baseline.
+    </p>
+    <p>
+      Source:
+      <url href="https://www.iea.org/reports/energy-and-ai/energy-supply-for-ai" visual="https://www.iea.org/reports/energy-and-ai/energy-supply-for-ai">https://www.iea.org/reports/energy-and-ai/energy-supply-for-ai</url>
     </p>
     <p>
       If global data centers were a standalone country, projected demand would place them among the
@@ -100,7 +104,11 @@
       United Nations University reporting highlights rapid growth in cooling-water withdrawals for
       next-generation server clusters. In the United States alone, facilities have consumed billions
       of gallons annually for cooling. Global AI-related water demand is projected in the billions of
-      cubic meters per year. Source: https://unu.edu/inweh/news/environmental-cost-of-AIs-Enrgy-use-carbon-water-and-land-footprints
+      cubic meters per year.
+    </p>
+    <p>
+      Source:
+      <url href="https://unu.edu/inweh/news/environmental-cost-of-AIs-Enrgy-use-carbon-water-and-land-footprints" visual="https://unu.edu/inweh/news/environmental-cost-of-AIs-Enrgy-use-carbon-water-and-land-footprints">https://unu.edu/inweh/news/environmental-cost-of-AIs-Enrgy-use-carbon-water-and-land-footprints</url>
     </p>
     <p>
       Solving these overlapping challenges, social equity in algorithm behavior and physical resource

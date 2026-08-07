@@ -253,7 +253,7 @@
           official grading rubric or project requirements provided by your instructor. Prompt the
           AI: "Audit my work against this rubric. Identify areas where my explanations are weak,
           where I might have missed a requirement, or where my code lacks edge-case error
-          handling."
+          handling, but don't give me the solution."
         </p>
         <p>
           <alert>Cognitive Benefit:</alert> It shifts your role from a passive writer to an editor
