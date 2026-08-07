@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<section xml:id="intro-ai_toolbox-core-subfields">
+  <title>The AI Toolbox (Core Subfields)</title>
+
+  <introduction>
+    <p>
+      AI is not one single technique. It is a toolbox of methods for learning from data,
+      recognizing patterns, and making predictions. This section introduces the core subfields you
+      will encounter most often in modern AI systems.
+    </p>
+  </introduction>
+
+  <subsection xml:id="intro-ai-toolbox_machine-learning-and-deep-learning">
+    <title>Machine Learning &amp; Deep Learning</title>
+    <p>
+      We will begin our investigation of the AI toolbox by breaking down the primary methodologies
+      that programmers use to find patterns. Depending on the nature of our data and the problem we
+      are trying to solve, machine learning tasks generally fall into three machine learning styles.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>Supervised Learning:</alert> Learning with a teacher. In this setup, the algorithm
+          is provided with a training dataset where every input is paired with its corresponding
+          correct output answer, known as a label. For instance, an algorithm can analyze thousands
+          of email examples explicitly marked as "spam" or "not spam" until it learns the distinct
+          features of an unwanted message.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Unsupervised Learning:</alert> Finding hidden patterns. Here, the algorithm
+          processes an unlabeled dataset completely on its own, without any historical answers
+          or human guidance. Instead of predicting a specific label, it looks for underlying
+          structures, similarities, or natural groupings within the data. This is often used
+          for tasks like customer segmentation, where an algorithm groups online shoppers together
+          based on shared buying habits.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Reinforcement Learning:</alert> Learning through trial and error. In this setup,
+          the algorithm acts as an autonomous agent interacting with a dynamic environment. It is
+          not given explicit answers or labeled data; instead, it receives feedback in the form of
+          rewards for good decisions and penalties for mistakes. Over time, the agent learns a
+          strategy (or policy) to maximize its total cumulative reward. For instance, a reinforcement
+          learning algorithm can learn to play a complex video game or navigate a robotic arm entirely
+          from scratch by trying millions of random actions, slowly figuring out which sequences of
+          movements lead to a high score or a successful task completion.
+        </p>
+      </li>
+    </ul>
+  </subsection>
+
+  <figure align="center" xml:id="intro-ai-three-learning-types">
+    <caption>Comparison of Machine Learning Types</caption>
+    <image source="IntroductiontoArtificialIntelligence/ML_learning_types.png" width="100%" alt="Diagram of three machine learning types"/>
+  </figure>
+
+  <subsection xml:id="intro-ai-toolbox_deep-learning">
+    <title>Deep Learning</title>
+    <p>
+      Deep learning is a specialized branch of machine learning that uses multi-layer neural
+      networks to learn complex patterns from large datasets. Instead of relying on humans to
+      manually design every feature, deep models can learn useful internal representations directly
+      from raw inputs such as text, audio, or images.
+    </p>
+    <p>
+      A neural network is organized into layers. Early layers often detect simple features, while
+      deeper layers combine those features into higher-level concepts. During training, the model
+      compares predictions to known answers, computes error, and updates internal weights through
+      an optimization process called gradient descent with backpropagation.
+    </p>
+    <p>
+      Deep learning powers many modern applications:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>Computer Vision:</alert> Convolutional and transformer-based models detect objects,
+          segment medical scans, and interpret scenes for autonomous systems.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Language Systems:</alert> Transformer architectures power translation, summarization,
+          question answering, and large language models.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Speech and Audio:</alert> Deep models convert speech to text, synthesize natural
+          voices, and separate sounds in noisy environments.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Deep learning is powerful, but it typically requires substantial data, compute resources,
+      and careful evaluation to avoid overfitting, bias amplification, and opaque decision-making.
+    </p>
+  </subsection>
+
+  
+
+  <subsection xml:id="intro-ai-toolbox_training-and-testing-sets">
+    <title>Understanding Training and Testing Sets</title>
+    <p>
+      When developing any machine learning model, a critical question arises: How do we prove our
+      algorithm has actually discovered real, generalized rules about the world instead of simply
+      memorizing our data?
+    </p>
+    <p>
+      If a student memorizes the exact phrasing of a practice exam's homework solutions, they might
+      achieve a 100% score on those specific problems. However, if the teacher presents slightly altered
+      questions on the actual test, a student who merely memorized the answers will fail. In machine
+      learning, this dangerous trap of raw memorization is known as overfitting.
+    </p>
+    <p>
+      To prevent overfitting, we must systematically partition our data into two completely separate
+      pools before training ever begins:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>The Training Set:</alert> This represents the primary portion of our historical data
+          (typically 75% to 80% of the dataset). The algorithm is granted full access to these samples,
+          adjusting its internal weights and parameters as it uncovers relationships between the input
+          features and target labels.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>The Testing Set:</alert> This is a collection of sample instances completely withheld
+          during the learning phase. It acts as an unbiased validation exam. Once the model is finalized,
+          we ask it to make predictions on the testing set. Because the algorithm has never seen these
+          exact instances before, its performance metrics give us an honest measurement of how well the
+          AI generalizes to the real world.
+        </p>
+      </li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="intro-ai-toolbox_nlp-and-computer-vision">
+    <title>Natural Language Processing (NLP) &amp; Computer Vision</title>
+    <p>
+      While basic machine learning works incredibly well with organized data spreadsheets, the human
+      world is full of unstructured information. Two of the most common and powerful subfields within
+      the AI toolbox focus on teaching computers to process human communication and imagery.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>Natural Language Processing (NLP):</alert> This subfield focuses on how machines read,
+          decipher, synthesize, and understand human languages. Human text is notoriously complex, filled
+          with context, slang, sarcasm, and ambiguous grammar rules. NLP enables applications like machine
+          translation, automated sentiment analysis, and the complex foundational architectures behind modern
+          Large Language Models (LLMs).
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Computer Vision:</alert> This subfield gives machines the ability to "see" and interpret
+          visual inputs. To a computer, an image is not a collection of shapes and colors; it is a giant,
+          complex grid of numerical pixel values. Computer vision utilizes advanced deep learning networks
+          to parse these pixel arrays, enabling systems to automatically identify objects, read traffic signs,
+          track motion, and power applications like facial recognition and autonomous driving vehicles.
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      <term>Python</term>
+    </p>
+    <program xml:id="intro_ai_toolbox_nlp_cv_python" interactive="activecode" language="python">
+      <input>
+# Simple placeholders to illustrate NLP and Computer Vision style tasks.
+
+text = "I love this class and this project is exciting!"
+positive_words = {"love", "exciting", "great", "awesome"}
+
+sentiment_score = sum(1 for w in text.lower().split() if w.strip("!.,") in positive_words)
+print("NLP sentiment score:", sentiment_score)
+
+# Pretend each value is a pixel intensity from a tiny 2x3 grayscale image.
+image_pixels = [
+    [12, 200, 180],
+    [15, 210, 175],
+]
+
+bright_pixels = sum(1 for row in image_pixels for p in row if p &gt;= 180)
+print("Computer vision bright-pixel count:", bright_pixels)
+      </input>
+    </program>
+  </subsection>
+
+  <subsection xml:id="intro-ai-toolbox_review-questions">
+    <title>Section 2.3 Review Questions</title>
+
+    <exercise label="ch2ai_sec3_q1">
+      <statement>
+        <p><strong>Question 1 (Categorizing Machine Learning Styles):</strong></p>
+        <p>
+          A banking institution wants to implement an automated fraud prevention system. To do this,
+          engineers compile a massive historical database containing 500,000 credit card transactions.
+          Each transaction entry is explicitly marked with a binary tag: either <c>1</c> for "Confirmed
+          Fraudulent" or <c>0</c> for "Legitimate User." The algorithm is tasked with analyzing this
+          historical data to find hidden mathematical relationships between transaction amounts,
+          geographical locations, and fraud occurrences.
+        </p>
+        <p>Which machine learning style is this system utilizing?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Unsupervised Learning, because the system must hunt for hidden, grouped anomalies completely on its own without human intervention.</p>
+          </statement>
+          <feedback>
+            Incorrect. The data here is explicitly labeled as fraudulent or legitimate.
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Supervised Learning, because the algorithm is provided with a training dataset where every input transaction is explicitly paired with a pre-determined correct output label.</p>
+          </statement>
+          <feedback>
+            Correct. This is supervised learning because each training example includes a known target label.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Reinforcement Learning, because the algorithm receives a positive financial reward whenever it stops a scammer and a penalty when it blocks a real customer.</p>
+          </statement>
+          <feedback>
+            Incorrect. The scenario describes learning from labeled historical data, not reward-based interaction.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Overfitting, because checking 500,000 real-world entries forces the model to memorize the exact names of the credit card holders.</p>
+          </statement>
+          <feedback>
+            Incorrect. Overfitting is a model failure mode, not a learning paradigm.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="ch2ai_sec3_q2">
+      <statement>
+        <p><strong>Question 2 (Identifying AI Toolbox Domains):</strong></p>
+        <p>
+          An automated warehouse facility deploys a fleet of mobile robotic sorting units. Each robot
+          is equipped with a high-definition digital camera. As packages move down a conveyor belt, an
+          onboard deep learning model scans the oncoming items. The algorithm translates the visual feed
+          from a massive grid of numerical pixel values to instantly draw digital boundaries around each
+          package, identifying its structural type (e.g., "Mailing Envelope," "Cardboard Box," or
+          "Plastic Tube") so the mechanical arm can safely grasp it.
+        </p>
+        <p>Which core AI subfields are being actively combined to execute this task?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Natural Language Processing (NLP) and Unsupervised Learning</p>
+          </statement>
+          <feedback>
+            Incorrect. The task is visual object identification, not language understanding.
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Computer Vision and Deep Learning</p>
+          </statement>
+          <feedback>
+            Correct. The system interprets camera pixels using a deep neural model for recognition.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Supervised Learning and Spreadsheet Calculators</p>
+          </statement>
+          <feedback>
+            Incorrect. Spreadsheets are not the core AI subfield driving this perception task.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Sentiment Analysis and Gradient Descent</p>
+          </statement>
+          <feedback>
+            Incorrect. Sentiment analysis is an NLP task, not package detection from images.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="ch2ai_sec3_q3">
+      <statement>
+        <p><strong>Question 3 (Evaluating Data Partitioning &amp; Model Generalization):</strong></p>
+        <p>
+          A team of medical researchers trains a deep learning model to spot early signs of pneumonia
+          from lung X-ray scans. During the training phase, they give the algorithm full access to
+          10,000 historical scans from Hospital A. The model achieves a flawless 100% accuracy score on
+          those 10,000 images. However, when the model is deployed at Hospital B and tested on a brand-new
+          batch of X-ray scans it has never seen before, its accuracy drops to 52%.
+        </p>
+        <p>What algorithmic error occurred, and how should the researchers have mathematically prevented it?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>The model suffered from <em>Context Drift</em>; they should have used Socratic dialogues to remind the algorithm how a lung looks.</p>
+          </statement>
+          <feedback>
+            Incorrect. Context drift applies to generative conversation behavior, not this training/evaluation failure.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>The model suffered from <em>Reinforcement Decay</em>; they should have rewarded the algorithm with more compute resources during the testing phase.</p>
+          </statement>
+          <feedback>
+            Incorrect. The issue is not reward tuning but poor generalization.
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>The model <em>overfitted</em> to the unique quirks of Hospital A's data; they should have partitioned their data to hide a separate <em>testing set</em> from the model during training to evaluate its true real-world generalization.</p>
+          </statement>
+          <feedback>
+            Correct. The model memorized training-set specifics and failed on unseen data; a held-out test set is the standard guardrail.
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>The model suffered from <em>Unsupervised Segmentation</em>; they should have manually hand-coded thousands of rigid spreadsheet rules instead of using a deep neural network.</p>
+          </statement>
+          <feedback>
+            Incorrect. This does not describe the observed train/test performance gap.
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

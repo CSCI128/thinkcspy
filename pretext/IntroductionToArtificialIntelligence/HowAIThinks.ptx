@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<section xml:id="intro-ai_how-ai-thinks">
+  <title>How AI 'Thinks'</title>
+
+  <introduction>
+    <p>
+      AI systems do not think like humans, but they can learn useful patterns from data and make
+      predictions at scale. This section contrasts traditional rule-based programming with machine
+      learning and introduces the key components that make modern AI possible.
+    </p>
+  </introduction>
+
+  <subsection xml:id="intro-ai_traditional-vs-ml">
+    <title>Traditional Programming vs. Machine Learning</title>
+
+    <p>
+      We will begin our investigation with a simple problem that you already know how to solve
+      using traditional programming. Suppose that you want to classify an object based on its
+      characteristics, such as determining whether a piece of fruit is an Apple or an Orange.
+      An explicit, iterative function that computes a classification like this is shown in the
+      Runestone workspace below.
+    </p>
+
+    <program xml:id="intro_ai_fruit_rules" interactive="activecode" language="python">
+      <input>
+def classify_fruit_by_rules(weight_grams, texture_code):
+    # texture_code: 1 = smooth, 2 = bumpy
+    if weight_grams &lt; 150 and texture_code == 1:
+        return "Apple"
+    elif weight_grams &gt;= 150 and texture_code == 2:
+        return "Orange"
+    elif texture_code == 1:
+        return "Apple"
+    else:
+        return "Orange"
+
+print(classify_fruit_by_rules(140, 1))
+print(classify_fruit_by_rules(170, 2))
+      </input>
+    </program>
+
+    <p>
+      This traditional function uses human-defined conditions, checking explicit weight thresholds
+      and texture metrics, to return a result.
+    </p>
+
+    <p>
+      Pretend for a minute that you do not know the exact physical traits that separate an apple
+      from an orange. How would you write a computer program to tell them apart?
+    </p>
+
+    <p>
+      If you were writing a traditional program, you would have to spend hours measuring thousands
+      of fruits, calculating averages, and hardcoding dozens of nested if/else statements.
+      In Traditional Software, a human developer must hand-craft the exact computational rules
+      to process data and yield answers:
+    </p>
+
+    <p>
+      <alert>Explicit Rules + Data = Answers</alert>
+    </p>
+
+    <p>
+      But what happens when the rules become too complex for a human to write down? For instance,
+      how would you write explicit rules to recognize a handwritten digit, or translate an entire
+      paragraph from English to Spanish?
+    </p>
+
+    <p>
+      <term>Shifting the Paradigm</term>
+    </p>
+
+    <p>
+      How can we take this dilemma and turn it into a Machine Learning (ML) solution?
+      Instead of writing the rules ourselves, we feed the computer historical examples where
+      the answers are already known (labeled data). The computer then uses an optimization
+      algorithm to discover the underlying mathematical formulas on its own.
+    </p>
+
+    <p>
+      In a machine learning workflow, the inputs and outputs are flipped:
+    </p>
+
+    <p>
+      <alert>Data + Answers = Explicit Rules (Patterns)</alert>
+    </p>
+
+    <p>
+      There are a few key ideas in this new paradigm to examine. First, our software acts less
+      like a strict calculator and more like a predictive system. Second, because the machine
+      deduces its own parameters, we must establish a way to ensure it actually understands the
+      concept rather than just memorizing our examples.
+    </p>
+
+    <p>
+      Here is an example of a classification ML algorithm from the <c>scikit-learn</c> library
+      that predicts whether a fruit is an Apple or an Orange.
+    </p>
+
+    <program xml:id="intro_ai_fruit_decision_tree" language="python">
+      <input>
+from sklearn.tree import DecisionTreeClassifier
+
+# X = [weight_grams, texture_code]
+# texture_code: 1 = smooth, 2 = bumpy
+X = [
+    [130, 1],
+    [140, 1],
+    [150, 1],
+    [160, 2],
+    [170, 2],
+    [180, 2],
+]
+
+y = [
+    "Apple",
+    "Apple",
+    "Apple",
+    "Orange",
+    "Orange",
+    "Orange",
+]
+
+model = DecisionTreeClassifier(random_state=42)
+model.fit(X, y)
+
+# Change this line for each test case.
+test_fruit = [[165, 1]]
+
+prediction = model.predict(test_fruit)
+print("Prediction:", prediction[0])
+      </input>
+    </program>
+
+    <p>
+      It is important to recognize that it is up to future programmers to know the hidden or
+      abstracted logic represented by the methods, classes, and objects in this program.
+    </p>
+
+   <p>
+    <term>Check your understanding</term>
+  </p>
+
+    <p>
+      Using a table, spreadsheet, or a piece of scratch paper, create a matrix for the following
+      three mystery fruits. Based strictly on the data rows provided in <c>X</c> and labels
+      <c>y</c> in the code above, mathematically reason out what the Decision Tree will classify
+      each fruit as, and write down why. Then execute the script three times, changing
+      <c>test_fruit</c> for each test to verify your predictions.
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          <alert>Test Case A: The Heavy Smooth Fruit</alert> <c>[[165, 1]]</c>
+        </p>
+        <p>
+          Deeper Thinking Hook: This fruit matches the weight of an orange but has the smooth
+          texture of an apple. It forces you to deduce which feature (weight or texture)
+          the tree values more heavily based on training balance.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test Case B: The Miniature Bumpy Fruit</alert> <c>[[110, 2]]</c>
+        </p>
+        <p>
+          Deeper Thinking Hook: This fruit is lighter than any apple in the dataset but has a
+          bumpy orange texture. Will the model classify by weight threshold or texture boundaries?
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Test Case C: The Exact Threshold Borderline</alert> <c>[[155, 1.5]]</c>
+        </p>
+        <p>
+          Deeper Thinking Hook: Passing a float value like 1.5 for texture (midway between smooth
+          and bumpy) tests how the algorithm handles continuous mathematical splits on features we
+          conceptualize as discrete.
+        </p>
+      </li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="intro-ai_triad">
+    <title>The AI Triad: Data, Algorithms, and Compute</title>
+
+    <p>
+      Why is AI booming now? The mathematical concepts behind machine learning are not new.
+      Many regression techniques and neural network ideas were developed decades ago. However,
+      the modern explosion of AI systems is driven by the simultaneous convergence of three
+      critical components known as the AI Triad.
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          <alert>Data (The Fuel):</alert> The rise of the internet, smartphones, and global
+          digital networks has generated a massive ocean of data. Algorithms require millions
+          of examples to discover reliable patterns, and the modern digital landscape provides
+          this scale.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Algorithms (The Engine):</alert> Refinements in multi-layered neural networks
+          (deep learning) and modern architectures like transformers have drastically improved
+          how systems handle complex sequences like language and pixels.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Compute (The Horsepower):</alert> Training an algorithm requires trillions of
+          mathematical matrix multiplications. The adoption of specialized hardware, specifically
+          GPUs (Graphics Processing Units), allows systems to process thousands of calculations
+          simultaneously, turning weeks of computational training into hours.
+        </p>
+      </li>
+    </ul>
+
+    <exercise label="ch2ai_sec2_q1" indent="show">
+      <statement>
+        <p>
+          <alert>Interactive Element (Parson's Problem): The ML Workflow</alert>
+        </p>
+        <p>
+          A machine learning engineer does not just throw data straight into an algorithm.
+          There is a precise operational pipeline required to successfully build an AI system.
+          Drag the blocks below into the correct top-to-bottom order for a standard ML workflow.
+        </p>
+      </statement>
+      <blocks>
+        <block>
+          <cline>Data Collection</cline>
+        </block>
+        <block>
+          <cline>Data Cleaning</cline>
+        </block>
+        <block>
+          <cline>Model Training</cline>
+        </block>
+        <block>
+          <cline>Evaluation</cline>
+        </block>
+        <block>
+          <cline>Deployment</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+</section>

@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<section xml:id="intro-ai_what-is-ai">
+  <title>What is Artificial Intelligence?</title>
+
+  <introduction>
+    <p>
+      Artificial intelligence is one of the most influential technologies in modern life, yet it is
+      often misunderstood as either magical or purely futuristic. In this section, we define what AI
+      actually is, separate narrow AI from general AI, and trace the key historical milestones that
+      shaped today's systems.
+    </p>
+  </introduction>
+
+  <subsection xml:id="intro-ai_defining-ai">
+    <title>Defining AI</title>
+  <p>
+      We will begin our investigation of this field by addressing a fundamental question: What does it mean
+      for a machine to be "intelligent"? Steve Wozniak, co-founder of Apple computers, reminded college
+      graduates in May 2026 that <alert>human beings possess 'Actual Intelligence'.</alert>
+  </p>
+  <p>
+      If you look at early computing devices, they were essentially high-speed calculators. They could follow
+      rigid mathematical instructions perfectly, but they lacked the ability to adapt. When we talk about
+      Artificial Intelligence (AI), we are describing a shift away from pure calculation toward systems that
+      can perceive their environment, learn from experience, and take independent actions to achieve a specific
+      goal. These systems are created by human beings to Augment Intelligence.
+  </p>
+  <p>
+      Computer scientists typically divide the pursuit of AI into two main philosophies:
+  </p>
+    <ul>
+      <li>
+        <p>
+          Thinking and Acting Humanly: Building systems that mimic human thought processes, cognitive behaviors,
+          and biological structures (like the neural networks in our brains).
+        </p>
+      </li>
+      <li>
+        <p>
+          Thinking and Acting Rationally: Building systems that rely on formal logic, probability theory, and
+          mathematics to make the best possible objective decision, regardless of whether a human would solve it
+          the same way.
+        </p>
+      </li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="intro-ai_ai-spectrum">
+    <title>The AI Spectrum</title>
+    <p>
+      When analyzing AI systems in the modern world, it is crucial to understand that not all "intelligence"
+      is scaled equally. We categorize AI capabilities into two distinct levels on a spectrum:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <alert>Artificial Narrow AI (ANI):</alert> Also frequently called Weak AI. These are software systems designed,
+          trained, and optimized to handle a single, highly specific task. A narrow AI might be incredibly
+          dominant at its given objective, such as a chess algorithm that can defeat a grandmaster, or a
+          recommendation loop that predicts which video you will click on next. However, that chess-playing
+          algorithm cannot translate a sentence, and the recommendation system cannot drive a car. It is
+          entirely bounded by its narrow domain.
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Artificial General AI (AGI):</alert> Also referred to as Strong AI. This describes a theoretical form of
+          intelligence where a machine possesses a human-level adaptability of mind. An AGI system would not
+          need to be reprogrammed for a new task; it could learn to paint a picture, write code, or reason
+          through an unfamiliar ethical dilemma using general cognitive flexibility. True AGI does not yet
+          exist and remains a theoretical milestone for researchers.
+        </p>
+      </li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="intro-ai_brief-history">
+    <title>A Brief History</title>
+    <p>
+      How did we arrive at the massive, data-driven AI systems we use today? The field did not appear overnight;
+      it is the result of decades of shifting concepts and computational evolution.
+    </p>
+    <p>
+      The philosophical foundation was laid in 1950 by British mathematician Alan Turing. He proposed a famous
+      thought experiment known as the Turing Test. Pretend that a human judge is typing messages into a computer
+      terminal, conversing with two hidden entities: a real human and a machine. If the judge cannot reliably tell
+      which entity is the computer after a free-flowing conversation, the machine has successfully demonstrated
+      intelligent behavior. A few years later, in the summer of 1956, a group of scientists gathered at the
+      Dartmouth Workshop. It was at this conference that the term "Artificial Intelligence" was officially coined,
+      launching the field as an independent academic discipline. Early pioneers were deeply optimistic, believing
+      that human-level intelligence could be recreated in a generation using basic symbolic logic.
+    </p>
+    <sidebyside widths="25% 70%">
+      <figure align="center">
+        <caption>Alan Turing</caption>
+        <image source="IntroductiontoArtificialIntelligence/Alan_turing_header.jpg" width="80%" alt="Alan Turing"/>
+      </figure>
+      <p>
+        However, early computers simply did not have the memory or speed to handle the complexities of the real world.
+        This led to decades of stagnant funding and skepticism, historically referred to as "AI Winters."
+      </p>
+    </sidebyside>
+    <p>
+      The modern boom we are experiencing today only became possible due to a perfect convergence: the sudden
+      availability of massive, global datasets to learn from, alongside the development of high-performance parallel
+      computing hardware (GPUs). Instead of trying to hand-code every single rule of logic into a computer,
+      scientists shifted to letting computers parse this massive sea of data to learn the rules for themselves.
+    </p>
+  </subsection>
+
+  <p>
+    <term>Check your understanding</term>
+  </p>
+
+  <exercise label="ch2ai_sec1_q1">
+    <statement>
+      <p>
+        In 1997, IBM's Deep Blue made history by defeating the reigning world chess champion, Garry Kasparov,
+        in a six-game match under standard tournament time controls. Deep Blue was capable of exploring up to
+        200 million possible chess positions per second to choose its best move, but it could not read an
+        article, converse with a human, or solve a simple tic-tac-toe game.
+      </p>
+      <p>
+        Deep Blue is an example of which level on the AI spectrum?
+      </p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            Artificial General AI (AGI), because defeating a human world champion in a highly complex
+            intellectual game requires human-level cognitive flexibility.
+          </p>
+        </statement>
+        <feedback>
+          Incorrect. Achieving mastery or defeating humans in a specific game does not make an AI general.
+          An AGI requires an adaptability of mind to learn entirely unrelated tasks on its own.
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            Artificial Narrow AI (ANI), because despite its dominance at chess, its capabilities were
+            entirely bounded to a single, highly specific mathematical domain.
+          </p>
+        </statement>
+        <feedback>
+          Correct! Deep Blue is a classic example of Artificial Narrow AI (ANI). No matter how superior an AI
+          is at its chosen task, if it cannot adapt its intelligence to function in a completely different
+          domain without being entirely rewritten, it remains narrow.
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Actual Intelligence, because its decision-making process mimicked the organic biological
+            intuition of human chess grandmasters.
+          </p>
+        </statement>
+        <feedback>
+          Incorrect. As Steve Wozniak noted, machines lack the organic "Actual Intelligence" of humans.
+          Deep Blue relied on brute-force search algorithms and hardcoded evaluation logic, not human intuition.
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            An AI Winter, because its reliance on massive computation rather than data-driven learning sets
+            caused stagnation in computer science research.
+          </p>
+        </statement>
+        <feedback>
+          Incorrect. Deep Blue's victory was a highly publicized success milestone that generated immense
+          interest in computing, quite the opposite of an "AI Winter."
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+
+  <exercise label="ch2ai_sec1_q2">
+    <statement>
+      <p>
+        In science fiction, JARVIS from the Marvel Cinematic Universe acts as an intelligent assistant to
+        Tony Stark. JARVIS independently manages complex automated factories, hacks secure global networks,
+        invents entirely new molecular elements, cracks jokes, holds philosophical debates, and autonomously
+        adapts to completely unfamiliar combat threats without needing structural software rewrites.
+      </p>
+      <p>
+        If JARVIS were to exist in the real world today, how would computer scientists categorize its
+        intelligence?
+      </p>
+    </statement>
+    <choices randomize="yes">
+      <choice>
+        <statement>
+          <p>
+            Artificial Narrow AI (ANI), because it is ultimately just a software co-pilot meant to augment
+            one human being.
+          </p>
+        </statement>
+        <feedback>
+          Incorrect. JARVIS operates across a limitless number of distinct tasks, meaning its domain is general
+          rather than narrow, regardless of who it is assisting.
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Symbolic Logic AI, because its ability to speak English perfectly proves it relies entirely on
+            rigid, pre-programmed grammatical rules.
+          </p>
+        </statement>
+        <feedback>
+          Incorrect. Symbolic logic alone was historically unable to handle the chaotic complexities of language
+          or general problem-solving, which is what led to the original AI winters.
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            Artificial General AI (AGI), because it demonstrates a human-level adaptability of mind,
+            emotional awareness, and the general cognitive flexibility to learn and solve any intellectual task.
+          </p>
+        </statement>
+        <feedback>
+          Correct! Fictional AIs like JARVIS, HAL 9000, or Commander Data represent Artificial General AI (AGI)
+          because they exhibit general cognitive flexibility, contextual reasoning, and independent adaptability
+          across entirely unrelated fields.
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>
+            Weak AI, because a machine operating in a fictional universe cannot meet Alan Turing's real-world
+            definition of passing the Turing Test.
+          </p>
+        </statement>
+        <feedback>
+          Incorrect. Fictional portrayals are used as conceptual benchmarks for Strong AI or AGI precisely
+          because their behavior demonstrates full human-level capability and conceptual self-awareness.
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>
